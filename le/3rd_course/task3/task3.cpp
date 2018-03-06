@@ -77,16 +77,22 @@ int main() {
   Circle* circle = new Circle(outter_radius);
   Ring* ring = new Ring(outter_radius, inner_radius);
 
+  // std::cout << '\n' << "set multiply value: " << increase << '\n';
+
+  // Circle
+  std::cout << "[ Circle ]";
   std::cout << '\n' << "information about circle: " << circle->information();
-  std::cout << '\n' << "information about ring:   " << ring->information() << '\n';
-
-  std::cout << '\n' << "increase by: " << increase << '\n';
-
   circle->increase(increase);
-  ring->increase(increase);
+  std::cout << '\n' << "increase in " << increase << "...";
+  std::cout << '\n' << "information about increased circle: " << circle->information() << '\n';
 
-  std::cout << '\n' << "information about circle: " << circle->information();
-  std::cout << '\n' << "information about ring:   " << ring->information() << '\n';
+
+  // Ring
+  std::cout << '\n' << "[ Ring ]";
+  std::cout << '\n' << "information about ring:   " << ring->information();
+  ring->increase(increase);
+  std::cout << '\n' << "increase in " << increase << "...";
+  std::cout << '\n' << "information about increased ring:   " << ring->information() << '\n';
 
   /*
   double outter_radius, inner_radius, increase;
