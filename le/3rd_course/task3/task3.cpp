@@ -36,7 +36,7 @@ public:
   }
 
   virtual void increase(double value) {
-    radius *= value;
+    radius *= abs(value);
   }
 
   string information() {
@@ -71,13 +71,11 @@ public:
 
 int main() {
   setlocale(LC_ALL, "Russian");
-
+  /*
   double outter_radius = 4, inner_radius = 3, increase = 1.5;
 
   Circle* circle = new Circle(outter_radius);
   Ring* ring = new Ring(outter_radius, inner_radius);
-
-  // std::cout << '\n' << "set multiply value: " << increase << '\n';
 
   // Circle
   std::cout << "[ Circle ]";
@@ -93,14 +91,33 @@ int main() {
   ring->increase(increase);
   std::cout << '\n' << "increase in " << increase << "...";
   std::cout << '\n' << "information about increased ring:   " << ring->information() << '\n';
+  */
 
-  /*
-  double outter_radius, inner_radius, increase;
+  double outter_radius, inner_radius, radius, increase;
 
-  std::cout << "Write radius of outter circle: ";
-  std::cin >> outter_radius;
+  // Circle
+  std::cout << '\n' << "[ Circle ]" << '\n';
+  std::cout << "[!] write radius of circle: ";
+  std::cin >> radius;
 
-  std::cout << "Write radius of inner circle:  ";
+  Circle* circle = new Circle(radius);
+
+  std::cout << '\n' << "information about circle: " << circle->information();
+  std::cout << '\n' << "[!] write multiplier value: ";
+  std::cin >> increase;
+
+  std::cout << '\n' << "increase in " << increase << "...";
+  circle->increase(increase);
+
+  std::cout << '\n' << "information about increased circle: " << circle->information() << '\n';
+
+  // Ring
+  std::cout << '\n' << "[ Ring ]" << '\n';
+
+  outter_radius = radius;
+
+  std::cout << "outter radius of Ring equals " << outter_radius << '\n';
+  std::cout << "[!] write inner radius of Ring:  ";
   std::cin >> inner_radius;
 
   outter_radius = abs(outter_radius);
@@ -110,32 +127,19 @@ int main() {
     swap(inner_radius, outter_radius);
   }
 
-  std::cout << '\n';
-  std::cout << "Radius of circle: " << outter_radius << '\n';
+  std::cout << "outter Ring radius is " << outter_radius << '\n';
+  std::cout << "inner Ring radius is " << inner_radius << '\n';
 
-  std::cout << '\n';
-  std::cout << "Outter radius of ring: " << outter_radius << '\n';
-  std::cout << "Inner radius of ring:  " << inner_radius << '\n';
-
-  std::cout << '\n';
-
-  Circle* circle = new Circle(outter_radius);
   Ring* ring = new Ring(outter_radius, inner_radius);
 
-  std::cout << '\n' << "information about circle: " << circle->information();
-  std::cout << '\n' << "information about ring:   " << ring->information() << '\n';
-
-  std::cout << '\n' << "increase by: ";
+  std::cout << '\n' << "information about Ring: " << ring->information();
+  std::cout << '\n' << "[!] write multiplier value: ";
   std::cin >> increase;
 
-  increase = abs(increase);
-
-  circle->increase(increase);
+  std::cout << '\n' << "increase in " << increase << "...";
   ring->increase(increase);
 
-  std::cout << '\n' << "information about circle: " << circle->information();
-  std::cout << '\n' << "information about ring:   " << ring->information() << '\n';
-  */
+  std::cout << '\n' << "information about increased Ring: " << ring->information() << '\n';
 
   int stop;
   std::cin >> stop;
