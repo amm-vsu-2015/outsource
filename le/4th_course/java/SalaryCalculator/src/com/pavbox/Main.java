@@ -7,7 +7,7 @@ package com.pavbox;
  */
 public class Main {
 
-    final static int BASE_RATE = 40;
+    final static int MAX_HOURS = 40;
 
     public static void main(String[] args) {
 
@@ -23,9 +23,9 @@ public class Main {
 
         float amount = 0.f;
 
-        if (hours > BASE_RATE) {
-            amount = BASE_RATE * rate;
-            amount += (hours - BASE_RATE) * (rate * 1.5);
+        if (hours > MAX_HOURS) {
+            amount = MAX_HOURS * rate;
+            amount += (hours - MAX_HOURS) * (rate * 1.5);
         } else {
             amount = hours * rate;
         }
