@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18d577a7-c2db-497e-8844-12e640313d8d" name="Default Changelist" comment="" />
+    <list default="true" id="18d577a7-c2db-497e-8844-12e640313d8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Bird.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Cute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Sign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/StupidCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/JavaPractice/src/com/pavbox/Trigger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/SalaryCalculator/src/com/pavbox/Salary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/QuestionGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/QuestionGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/SalaryCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/SalaryCalculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/SalaryCalculator/out/production/SalaryCalculator/com/pavbox/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/SalaryCalculator/out/production/SalaryCalculator/com/pavbox/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PalindromeChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PalindromeChecker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,19 +30,19 @@
     <session id="-1518342871">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="370" />
+          <entry key="java" value="371" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="370" />
+          <entry key="JAVA" value="371" />
         </counts>
       </usages-collector>
     </session>
@@ -35,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/pavbox/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -64,9 +81,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -112,15 +129,11 @@
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32970026" />
@@ -128,12 +141,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -142,8 +159,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/pavbox/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
