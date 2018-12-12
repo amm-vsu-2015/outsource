@@ -1,4 +1,10 @@
 package edu.core.java.rabbitbag.translator;
 
-public class Translator {
+import edu.core.java.rabbitbag.domain.DomainObject;
+import edu.core.java.rabbitbag.vo.ValueObject;
+
+public interface Translator<V extends ValueObject, D extends DomainObject> {
+
+    // translate one to another
+
 }
