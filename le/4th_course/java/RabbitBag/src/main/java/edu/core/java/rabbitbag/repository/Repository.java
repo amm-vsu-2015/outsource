@@ -7,10 +7,6 @@ import java.util.List;
 
 public class Repository<V extends ValueObject> {
 
-    V find(long id) {
-        return;
-    }
-
     List<V> findAll() {
         return Collections.emptyList();
     }
