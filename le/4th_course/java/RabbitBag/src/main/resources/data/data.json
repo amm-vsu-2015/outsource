@@ -1,0 +1,38 @@
+{
+  "feed_type": [
+    { "id": 1, "name": "combicorm" }
+  ],
+
+  "restriction_type": [
+    { "id": 1, "name": "age" },
+    { "id": 2, "name": "health" }
+  ],
+
+  "feed": [
+    {
+      "name": "whiskass",
+      "brand": "govno",
+      "expiration_term": "2018-12-24T13:35:15+03:00",
+      "type": 1
+    },
+    {
+      "name": "pedigree",
+      "brand": "piss",
+      "expiration_term": "2019-12-24T13:35:15+03:00",
+      "type": 2
+    }
+  ],
+
+  "restrictions": [
+    { "id": 1, "feed_type": 1 }
+  ],
+
+  "kits": [
+    {
+      "name": "turbo",
+      "description": "make rabbit great again",
+      "restrictions": 1
+    }
+  ]
+}
+
