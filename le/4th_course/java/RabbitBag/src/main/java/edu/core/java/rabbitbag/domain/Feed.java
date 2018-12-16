@@ -18,4 +18,38 @@ public class Feed extends DomainObject {
     @JsonProperty("type")
     private long type;
 
+    // Getters and Setters
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public Date getExpirationTerm() {
+        return expirationTerm;
+    }
+
+    public void setExpirationTerm(Date expirationTerm) {
+        this.expirationTerm = expirationTerm;
+    }
+
+    public long getType() {
+        return type;
+    }
+
+    public void setType(long type) {
+        this.type = type;
+    }
+
 }

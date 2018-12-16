@@ -7,4 +7,7 @@ public interface Translator<V extends ValueObject, D extends DomainObject> {
 
     // translate one to another
 
+    V translate(D domain);
+
+    D translate(V domain);
 }

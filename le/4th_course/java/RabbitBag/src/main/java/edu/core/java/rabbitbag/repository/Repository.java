@@ -5,28 +5,20 @@ import edu.core.java.rabbitbag.vo.ValueObject;
 import java.util.Collections;
 import java.util.List;
 
-public class Repository<V extends ValueObject> {
+public abstract class Repository<V extends ValueObject> {
+
+    private List<V> collection;
 
     List<V> findAll() {
-        return Collections.emptyList();
+        return collection;
     }
 
     List<V> findBy(String type) {
         return Collections.emptyList();
     }
 
-    void add(V object) {
-
-    }
-
-
-    void update(V object) {
-
-    }
-
-
-    void remove(long id) {
-
-    }
+    abstract void add(V object);
+    abstract void update(V object);
+    abstract void remove(long id);
 
 }
