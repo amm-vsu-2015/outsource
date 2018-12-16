@@ -9,6 +9,7 @@ edu/core/java/rabbitbag/domain/JsonFileObject.class
 edu/core/java/rabbitbag/repository/KitsRepository.class
 edu/core/java/rabbitbag/translator/KitsTranslator.class
 edu/core/java/rabbitbag/domain/FeedType.class
+edu/core/java/rabbitbag/shared/SharedLogger.class
 edu/core/java/rabbitbag/loader/JsonFileLoader.class
 edu/core/java/rabbitbag/domain/Restrictions.class
 edu/core/java/rabbitbag/Main.class

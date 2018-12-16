@@ -28,12 +28,7 @@ public class Main {
         JsonFileLoader loader = new JsonFileLoader();
 
         List<Kits> kits = loader.loadKits();
-
-        if (kits != null) {
-            for (int i = 0; i < kits.size(); i++) {
-                System.out.println(kits.get(i).getName());
-            }
-        }
+        kits.forEach(kit -> System.out.println(kit.getName()));
     }
 
 }

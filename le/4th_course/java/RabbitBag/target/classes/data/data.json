@@ -33,6 +33,11 @@
       "name": "turbo",
       "description": "make rabbit great again",
       "restrictions": 1
+    },
+    {
+      "name": "lsd",
+      "description": "i'm great again",
+      "restrictions": 2
     }
   ]
 }
