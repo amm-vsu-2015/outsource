@@ -14,6 +14,10 @@ public class Kits extends DomainObject {
     @JsonProperty("restrictions")
     private long restrictions;
 
+    // Constructors
+
+    public Kits() { super(); }
+
     // Getters and Setters
 
     public String getName() {
@@ -40,15 +44,17 @@ public class Kits extends DomainObject {
         this.restrictions = restrictions;
     }
 
-    // convenience
+    // Convenience
 
     public Kits(String name, String description, long restrictions) {
+        super();
         this.name = name;
         this.description = description;
         this.restrictions = restrictions;
     }
 
     public Kits(KitsValueObject vo) {
+        super();
         this.name = vo.getName();
         this.description = vo.getDescription();
         this.restrictions = vo.getRestrictions();

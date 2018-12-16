@@ -7,7 +7,7 @@ import java.util.List;
 
 public abstract class Repository<V extends ValueObject> {
 
-    private List<V> collection;
+    protected List<V> collection;
 
     List<V> findAll() {
         return collection;

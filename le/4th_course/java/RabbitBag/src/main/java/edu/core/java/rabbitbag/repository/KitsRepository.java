@@ -6,12 +6,14 @@ public class KitsRepository extends Repository<KitsValueObject> {
 
     @Override
     void add(KitsValueObject object) {
-
+        collection.add(object);
     }
 
     @Override
     void update(KitsValueObject object) {
-
+        int index = collection.indexOf(object);
+        collection.set(index, object);
+        // todo update json in file
     }
 
     @Override

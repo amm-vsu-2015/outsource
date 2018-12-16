@@ -32,11 +32,8 @@ public class KitsValueObject extends ValueObject {
         this.description = description;
     }
 
-    public long getRestrictions() {
-        return restrictions;
-    }
+    public long getRestrictions() { return restrictions; }
 
-    public void setRestrictions(long restrictions) {
-        this.restrictions = restrictions;
-    }
+    public void setRestrictions(long restrictions) { this.restrictions = restrictions; }
+
 }

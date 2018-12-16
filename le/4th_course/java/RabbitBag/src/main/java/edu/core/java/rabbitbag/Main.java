@@ -5,11 +5,13 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.domain.Kits;
+import edu.core.java.rabbitbag.loader.JsonFileLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.security.CodeSource;
+import java.util.List;
 import java.util.Properties;
 
 public class Main {
@@ -23,22 +25,14 @@ public class Main {
         Logger logger = LoggerFactory.getLogger("edu.core.java.rabbitbag.Main");
         logger.debug("Hello, debugger!");
 
-        JsonFactory f = new JsonFactory();
+        JsonFileLoader loader = new JsonFileLoader();
 
-        ObjectMapper mapper = new ObjectMapper();
+        List<Kits> kits = loader.loadKits();
 
-        try {
-            InputStream in = Main.class.getResourceAsStream("/data/data.json");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-            JsonParser p = f.createParser(in);
-            JsonFileObject k = mapper.readValue(p, JsonFileObject.class);
-
-            for (int i = 0; i < k.kits.size(); i++) {
-                System.out.println(k.kits.get(i).getName());
+        if (kits != null) {
+            for (int i = 0; i < kits.size(); i++) {
+                System.out.println(kits.get(i).getName());
             }
-
-        } catch (IOException ex) {
-             logger.debug(ex.toString());
         }
     }
 
