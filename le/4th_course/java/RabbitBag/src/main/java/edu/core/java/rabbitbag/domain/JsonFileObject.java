@@ -17,8 +17,8 @@ public class JsonFileObject extends DomainObject {
     @JsonProperty("feed")
     public List<Feed> feed;
 
-    @JsonProperty("restrictions")
-    public List<Restrictions> restrictions;
+    @JsonProperty("brand")
+    public List<Brand> brand;
 
     @JsonProperty("kits")
     public List<Kits> kits;
