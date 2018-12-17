@@ -10,6 +10,8 @@ public class KitsValueObject extends ValueObject {
 
     private long restrictions;
 
+    // Constructors
+
     public KitsValueObject(Kits entity) {
         this.id = entity.getId();
         this.name = entity.getName();

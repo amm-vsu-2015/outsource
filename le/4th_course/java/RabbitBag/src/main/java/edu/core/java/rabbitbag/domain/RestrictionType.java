@@ -9,6 +9,10 @@ public class RestrictionType extends DomainObject {
     @JsonProperty("name")
     private String name;
 
+    // Constructors
+
+    // Convenience
+
     // Getters and Setters
 
     public String getName() {

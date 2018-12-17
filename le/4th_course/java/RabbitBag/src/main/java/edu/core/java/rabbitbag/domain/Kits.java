@@ -20,6 +20,22 @@ public class Kits extends DomainObject {
 
     public Kits() { super(); }
 
+    // Convenience
+
+    public Kits(String name, String description, long restrictions) {
+        super();
+        this.name = name;
+        this.description = description;
+        this.restrictions = restrictions;
+    }
+
+    public Kits(KitsValueObject vo) {
+        super();
+        this.name = vo.getName();
+        this.description = vo.getDescription();
+        this.restrictions = vo.getRestrictions();
+    }
+
     // Getters and Setters
 
     public String getName() {
@@ -46,19 +62,4 @@ public class Kits extends DomainObject {
         this.restrictions = restrictions;
     }
 
-    // Convenience
-
-    public Kits(String name, String description, long restrictions) {
-        super();
-        this.name = name;
-        this.description = description;
-        this.restrictions = restrictions;
-    }
-
-    public Kits(KitsValueObject vo) {
-        super();
-        this.name = vo.getName();
-        this.description = vo.getDescription();
-        this.restrictions = vo.getRestrictions();
-    }
 }

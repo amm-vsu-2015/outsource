@@ -3,13 +3,11 @@ package edu.core.java.rabbitbag.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-// connect restrictions and feed type
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Restrictions extends DomainObject {
+public class Brand extends DomainObject {
 
-    @JsonProperty("feed_type")
-    private long feedType;
+    @JsonProperty("name")
+    private String name;
 
     // Constructors
 
@@ -17,11 +15,12 @@ public class Restrictions extends DomainObject {
 
     // Getters and Setters
 
-    public long getFeedType() {
-        return feedType;
+
+    public String getName() {
+        return name;
     }
 
-    public void setFeedType(long feedType) {
-        this.feedType = feedType;
+    public void setName(String name) {
+        this.name = name;
     }
 }

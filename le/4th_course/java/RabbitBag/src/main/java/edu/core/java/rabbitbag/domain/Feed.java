@@ -12,13 +12,17 @@ public class Feed extends DomainObject {
     private String name;
 
     @JsonProperty("brand")
-    private String brand;
+    private long brand;
 
     @JsonProperty("expiration_term")
     private Date expirationTerm;
 
     @JsonProperty("type")
     private long type;
+
+    // Constructors
+
+    // Convenience
 
     // Getters and Setters
 
@@ -30,11 +34,11 @@ public class Feed extends DomainObject {
         this.name = name;
     }
 
-    public String getBrand() {
+    public long getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setBrand(long brand) {
         this.brand = brand;
     }
 

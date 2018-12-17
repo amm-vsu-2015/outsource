@@ -7,6 +7,10 @@ public class FeedType extends DomainObject {
     @JsonProperty("name")
     private String name;
 
+    // Constructors
+
+    // Convenience
+
     // Getters and Setters
 
     public String getName() {
