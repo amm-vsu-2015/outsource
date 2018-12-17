@@ -1,8 +1,11 @@
 package edu.core.java.rabbitbag.domain;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import edu.core.java.rabbitbag.vo.KitsValueObject;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Kits extends DomainObject {
 
     @JsonProperty("name")
