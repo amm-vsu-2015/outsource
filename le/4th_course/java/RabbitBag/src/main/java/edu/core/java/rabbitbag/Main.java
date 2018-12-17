@@ -1,18 +1,13 @@
 package edu.core.java.rabbitbag;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.core.java.rabbitbag.domain.JsonFileObject;
+import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.Kits;
-import edu.core.java.rabbitbag.loader.JsonFileLoader;
+import edu.core.java.rabbitbag.loader.FeedLoader;
+import edu.core.java.rabbitbag.loader.KitsLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.security.CodeSource;
 import java.util.List;
-import java.util.Properties;
 
 public class Main {
 
@@ -25,10 +20,13 @@ public class Main {
         Logger logger = LoggerFactory.getLogger("edu.core.java.rabbitbag.Main");
         logger.debug("Hello, debugger!");
 
-        JsonFileLoader loader = new JsonFileLoader();
+        KitsLoader kitsLoader = new KitsLoader();
+        List<Kits> kits = kitsLoader.load();
+        kits.forEach(kit -> System.out.println(kit.getName()));
 
-        JsonFileObject kits = loader.loadKits();
-        // kits.forEach(kit -> System.out.println(kit.getName()));
+        FeedLoader feedLoader = new FeedLoader();
+        List<Feed> feed = feedLoader.load();
+        feed.forEach(fd -> System.out.println(fd.getName()));
     }
 
 }

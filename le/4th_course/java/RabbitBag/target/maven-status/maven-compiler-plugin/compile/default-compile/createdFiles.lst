@@ -1,12 +1,15 @@
 edu/core/java/rabbitbag/domain/RestrictionType.class
 edu/core/java/rabbitbag/loader/Loader.class
 edu/core/java/rabbitbag/loader/JsonFileLoader$1.class
+edu/core/java/rabbitbag/loader/KitsLoader$1.class
 edu/core/java/rabbitbag/domain/DomainObject.class
 edu/core/java/rabbitbag/vo/KitsValueObject.class
 edu/core/java/rabbitbag/domain/Feed.class
 edu/core/java/rabbitbag/repository/Repository.class
+edu/core/java/rabbitbag/loader/KitsLoader.class
 edu/core/java/rabbitbag/translator/Translator.class
 edu/core/java/rabbitbag/domain/JsonFileObject.class
+edu/core/java/rabbitbag/loader/FeedLoader$1.class
 edu/core/java/rabbitbag/repository/KitsRepository.class
 edu/core/java/rabbitbag/translator/KitsTranslator.class
 edu/core/java/rabbitbag/domain/FeedType.class
@@ -16,3 +19,4 @@ edu/core/java/rabbitbag/domain/Restrictions.class
 edu/core/java/rabbitbag/Main.class
 edu/core/java/rabbitbag/domain/Kits.class
 edu/core/java/rabbitbag/vo/ValueObject.class
+edu/core/java/rabbitbag/loader/FeedLoader.class
