@@ -7,11 +7,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.repository.FeedRepository;
-import edu.core.java.rabbitbag.repository.KitsRepository;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
 public class FeedLoader extends Loader<JsonFileObject> {
