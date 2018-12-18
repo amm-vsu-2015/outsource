@@ -14,6 +14,7 @@ edu/core/java/rabbitbag/loader/FeedLoader.class
 edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.class
 edu/core/java/rabbitbag/vo/FeedTypeValueObject.class
 edu/core/java/rabbitbag/domain/DomainObject.class
+edu/core/java/rabbitbag/vo/BrandValueObject.class
 edu/core/java/rabbitbag/vo/KitsValueObject.class
 edu/core/java/rabbitbag/repository/Repository.class
 edu/core/java/rabbitbag/loader/KitsLoader.class
@@ -21,3 +22,4 @@ edu/core/java/rabbitbag/repository/KitsRepository.class
 edu/core/java/rabbitbag/translator/KitsTranslator.class
 edu/core/java/rabbitbag/domain/FeedType.class
 edu/core/java/rabbitbag/shared/SharedLogger.class
+edu/core/java/rabbitbag/repository/FeedRepository.class

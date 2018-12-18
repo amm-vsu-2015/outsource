@@ -4,6 +4,7 @@ import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.Kits;
 import edu.core.java.rabbitbag.loader.FeedLoader;
 import edu.core.java.rabbitbag.loader.KitsLoader;
+import edu.core.java.rabbitbag.repository.FeedRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,9 +25,14 @@ public class Main {
         List<Kits> kits = kitsLoader.load();
         kits.forEach(kit -> System.out.println(kit.getName()));
 
+        // setup loader
         FeedLoader feedLoader = new FeedLoader();
-        List<Feed> feed = feedLoader.load();
-        feed.forEach(fd -> System.out.println(fd.getName()));
+
+        // get repo
+        FeedRepository feedRepository = feedLoader.getRepository();
+
+        // get feeds
+        feedRepository.findAll().forEach(fd -> System.out.println(fd.getName()));
     }
 
 }
