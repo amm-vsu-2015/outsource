@@ -1,14 +1,14 @@
 package edu.core.java.rabbitbag.vo;
 
-import edu.core.java.rabbitbag.domain.FeedType;
+import edu.core.java.rabbitbag.domain.Brand;
 
-public class FeedTypeValueObject extends ValueObject {
+public class BrandValueObject extends ValueObject {
 
     private String name;
 
     // Constructors
 
-    public FeedTypeValueObject(FeedType entity) {
+    public BrandValueObject(Brand entity) {
         this.name = entity.getName();
     }
 

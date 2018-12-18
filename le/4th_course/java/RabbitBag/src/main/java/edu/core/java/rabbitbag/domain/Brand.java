@@ -11,6 +11,8 @@ public class Brand extends DomainObject {
 
     // Constructors
 
+    public Brand() { }
+
     // Convenience
 
     // Getters and Setters

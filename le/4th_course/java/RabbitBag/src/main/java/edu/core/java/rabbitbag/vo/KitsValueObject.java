@@ -18,6 +18,8 @@ public class KitsValueObject extends ValueObject {
         this.description = entity.getDescription();
     }
 
+    // Getters and Setters
+
     public String getName() {
         return name;
     }
