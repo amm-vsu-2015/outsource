@@ -18,6 +18,7 @@ public class KitsRepository extends Repository<KitsValueObject> {
 
     @Override
     public void remove(long id) {
-
+        collection.removeIf(kit -> kit.getId() == id);
     }
+
 }
