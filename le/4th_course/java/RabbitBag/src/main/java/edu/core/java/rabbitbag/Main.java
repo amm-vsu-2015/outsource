@@ -35,6 +35,15 @@ public class Main {
         feedRepository
                 .findAll()
                 .forEach(fd -> System.out.println(fd.getName()));
+
+        feedRepository.remove(1);
+
+        // get feeds
+        feedRepository
+                .findAll()
+                .forEach(fd -> System.out.println(fd.getName()));
+
+        feedLoader.upload(feedRepository);
     }
 
 }

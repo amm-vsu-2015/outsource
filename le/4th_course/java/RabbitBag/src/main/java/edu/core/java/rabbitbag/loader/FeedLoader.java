@@ -57,5 +57,11 @@ public class FeedLoader extends Loader<JsonFileObject> {
         }
     }
 
-    // todo set update for repository -> entities
+    public void upload(FeedRepository feedRepository) {
+        // todo 1: load all available for this repo entities from json
+        // todo 2: load in same repos
+        // todo 3: parse repos and replace some items if they was changed (by id)
+        // todo 4: convert to json and save
+    }
+
 }
