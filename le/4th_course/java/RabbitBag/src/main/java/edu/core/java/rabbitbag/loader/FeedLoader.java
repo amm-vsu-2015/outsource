@@ -1,9 +1,12 @@
 package edu.core.java.rabbitbag.loader;
 
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.FeedType;
@@ -66,6 +69,30 @@ public class FeedLoader extends Loader<JsonFileObject> {
         // todo 2: load in same repos
         // todo 3: parse repos and replace some items if they was changed (by id)
         // todo 4: convert to json and save
+
+        try {
+            JsonParser parser = getParserFromJsonDB();
+
+            JsonNode node = mapper.readTree(parser);
+            JsonNode brandTree = node.get("brand");
+
+            for (JsonNode brandNode : brandTree) {
+                Long id = mapper.readValue(brandNode.get("id").toString(), Long.class);
+                if (id == 2) {
+                    ObjectNode on = ((ObjectNode) brandNode).put("name", "lololl");
+                    break;
+                }
+            }
+
+
+            for (FeedValueObject feedVO : feedRepository.findAll()) {
+
+            }
+
+            // todo save to file
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
 }

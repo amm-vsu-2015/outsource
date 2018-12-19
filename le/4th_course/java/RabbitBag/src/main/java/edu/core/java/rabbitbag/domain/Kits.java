@@ -22,15 +22,9 @@ public class Kits extends DomainObject {
 
     // Convenience
 
-    public Kits(String name, String description, long restrictions) {
-        super();
-        this.name = name;
-        this.description = description;
-        this.restrictions = restrictions;
-    }
-
     public Kits(KitsValueObject vo) {
         super();
+        this.id = vo.getId();
         this.name = vo.getName();
         this.description = vo.getDescription();
         this.restrictions = vo.getRestrictions();

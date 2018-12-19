@@ -2,6 +2,7 @@ package edu.core.java.rabbitbag.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import edu.core.java.rabbitbag.vo.FeedValueObject;
 
 import java.util.Date;
 
@@ -22,7 +23,18 @@ public class Feed extends DomainObject {
 
     // Constructors
 
+    public Feed() { }
+
     // Convenience
+
+    public Feed(FeedValueObject vo) {
+        super();
+        this.id = vo.getId();
+        this.name = vo.getName();
+        this.brand = vo.getBrand().getId();
+        this.expirationTerm = vo.getExpirationTerm();
+        this.type = vo.getType().getId();
+    }
 
     // Getters and Setters
 

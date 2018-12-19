@@ -2,6 +2,7 @@ package edu.core.java.rabbitbag.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import edu.core.java.rabbitbag.vo.BrandValueObject;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Brand extends DomainObject {
@@ -14,6 +15,12 @@ public class Brand extends DomainObject {
     public Brand() { }
 
     // Convenience
+
+    public Brand(BrandValueObject vo) {
+        super();
+        this.id = vo.getId();
+        this.name = vo.getName();
+    }
 
     // Getters and Setters
 
