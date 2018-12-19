@@ -16,11 +16,15 @@ import java.util.List;
 
 public class FeedLoader extends Loader<JsonFileObject> {
 
+    private ObjectMapper mapper = new ObjectMapper();
+
     public FeedRepository getRepository() {
-        ObjectMapper mapper = new ObjectMapper();
 
         try {
             JsonParser parser = getParserFromJsonDB();
+
+            // collect object
+
             JsonNode node = mapper.readTree(parser);
             List<Feed> feeds = mapper.readValue(node.get("feed").toString(), new TypeReference<List<Feed>>(){});
             List<Brand> brands = mapper.readValue(node.get("brand").toString(), new TypeReference<List<Brand>>(){});
