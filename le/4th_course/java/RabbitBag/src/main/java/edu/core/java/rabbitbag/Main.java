@@ -32,7 +32,9 @@ public class Main {
         FeedRepository feedRepository = feedLoader.getRepository();
 
         // get feeds
-        feedRepository.findAll().forEach(fd -> System.out.println(fd.getName()));
+        feedRepository
+                .findAll()
+                .forEach(fd -> System.out.println(fd.getName()));
     }
 
 }

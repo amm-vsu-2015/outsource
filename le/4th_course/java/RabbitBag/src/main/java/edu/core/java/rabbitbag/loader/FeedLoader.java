@@ -4,7 +4,9 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
+import edu.core.java.rabbitbag.domain.FeedType;
 import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
@@ -21,11 +23,31 @@ public class FeedLoader extends Loader<JsonFileObject> {
             JsonParser parser = getParserFromJsonDB();
             JsonNode node = mapper.readTree(parser);
             List<Feed> feeds = mapper.readValue(node.get("feed").toString(), new TypeReference<List<Feed>>(){});
+            List<Brand> brands = mapper.readValue(node.get("brand").toString(), new TypeReference<List<Brand>>(){});
+            List<FeedType> types = mapper.readValue(node.get("feed_type").toString(), new TypeReference<List<FeedType>>(){});
 
             FeedRepository repository = new FeedRepository();
 
             for (Feed feed : feeds) {
-                repository.add(new FeedValueObject(feed));
+
+                Brand feedBrand = null;
+                FeedType feedType = null;
+
+                for (Brand brand : brands) {
+                    if (brand.getId() == feed.getBrand()) {
+                        feedBrand = brand;
+                        break;
+                    }
+                }
+
+                for (FeedType type : types) {
+                    if (type.getId() == feed.getType()) {
+                        feedType = type;
+                        break;
+                    }
+                }
+
+                repository.add(new FeedValueObject(feed, feedBrand, feedType));
             }
 
             return repository;

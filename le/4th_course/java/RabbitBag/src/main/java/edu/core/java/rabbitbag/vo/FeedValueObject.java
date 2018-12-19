@@ -1,6 +1,8 @@
 package edu.core.java.rabbitbag.vo;
 
+import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
+import edu.core.java.rabbitbag.domain.FeedType;
 
 import java.util.Date;
 
@@ -16,8 +18,12 @@ public class FeedValueObject extends ValueObject {
 
     // Constructor
 
-    public FeedValueObject(Feed entity) {
+    public FeedValueObject(Feed entity, Brand brand, FeedType type) {
+        this.id = entity.getId();
         this.name = entity.getName();
+        this.brand = new BrandValueObject(brand);
+        this.expirationTerm = entity.getExpirationTerm();
+        this.type = new FeedTypeValueObject(type);
     }
 
     // Getters and Setters

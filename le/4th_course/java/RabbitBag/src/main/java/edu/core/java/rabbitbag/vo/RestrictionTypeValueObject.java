@@ -9,6 +9,7 @@ public class RestrictionTypeValueObject extends ValueObject {
     // Constructors
 
     public RestrictionTypeValueObject(RestrictionType entity) {
+        this.id = entity.getId();
         this.name = entity.getName();
     }
 
