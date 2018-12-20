@@ -6,6 +6,7 @@ edu/core/java/rabbitbag/domain/Feed.class
 edu/core/java/rabbitbag/translator/Translator.class
 edu/core/java/rabbitbag/domain/JsonFileObject.class
 edu/core/java/rabbitbag/loader/FeedLoader$1.class
+edu/core/java/rabbitbag/helpers/FeedSerializer.class
 edu/core/java/rabbitbag/domain/Brand.class
 edu/core/java/rabbitbag/Main.class
 edu/core/java/rabbitbag/vo/FeedValueObject.class

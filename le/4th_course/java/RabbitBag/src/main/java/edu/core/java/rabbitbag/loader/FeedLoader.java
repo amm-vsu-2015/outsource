@@ -15,6 +15,7 @@ import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FeedLoader extends Loader<JsonFileObject> {
@@ -85,9 +86,18 @@ public class FeedLoader extends Loader<JsonFileObject> {
             }
 
 
-            for (FeedValueObject feedVO : feedRepository.findAll()) {
+            List<Feed> feeds = new ArrayList<Feed>();
 
+            for (FeedValueObject feedVO : feedRepository.findAll()) {
+                feeds.add(new Feed(feedVO));
             }
+
+            ObjectNode feedTree = (ObjectNode) node;
+
+            feedTree.removeAll();
+            feedTree.put("feed", mapper.writeValueAsString(feeds));
+
+            System.out.println(feedTree.toString());
 
             // todo save to file
         } catch (IOException e) {
