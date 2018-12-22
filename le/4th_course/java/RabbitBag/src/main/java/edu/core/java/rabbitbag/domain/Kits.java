@@ -13,8 +13,8 @@ public class Kits extends DomainObject {
     @JsonProperty("description")
     private String description;
 
-    @JsonProperty("restrictions")
-    private long restrictions;
+    @JsonProperty("restriction")
+    private long restriction;
 
     // Constructors
 
@@ -27,7 +27,7 @@ public class Kits extends DomainObject {
         this.id = vo.getId();
         this.name = vo.getName();
         this.description = vo.getDescription();
-        this.restrictions = vo.getRestrictions();
+        this.restriction = vo.getRestriction().getId();
     }
 
     // Getters and Setters
@@ -48,12 +48,12 @@ public class Kits extends DomainObject {
         this.description = description;
     }
 
-    public long getRestrictions() {
-        return restrictions;
+    public long getRestriction() {
+        return restriction;
     }
 
-    public void setRestrictions(long restrictions) {
-        this.restrictions = restrictions;
+    public void setRestrictions(long restriction) {
+        this.restriction = restriction;
     }
 
 }

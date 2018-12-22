@@ -16,7 +16,7 @@ public class Loader<D extends DomainObject> {
 
     protected JsonParser getParserFromJsonDB() throws IOException {
         JsonFactory factory = new JsonFactory();
-        //InputStream in = Main.class.getResourceAsStream("/data/data.json");
+        // InputStream in = Main.class.getResourceAsStream("/data/data.json");
         // BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
         // (new File("").getAbsolutePath() + "/classes/data/data.json")/

@@ -37,13 +37,13 @@
       "id": 1,
       "name": "turbo",
       "description": "make rabbit great again",
-      "restrictions": 1
+      "restriction": 1
     },
     {
       "id": 2,
       "name": "lsd",
       "description": "i'm great again",
-      "restrictions": 2
+      "restriction": 2
     }
   ]
 }

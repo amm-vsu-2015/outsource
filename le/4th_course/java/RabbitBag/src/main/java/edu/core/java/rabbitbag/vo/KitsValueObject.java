@@ -1,6 +1,7 @@
 package edu.core.java.rabbitbag.vo;
 
 import edu.core.java.rabbitbag.domain.Kits;
+import edu.core.java.rabbitbag.domain.RestrictionType;
 
 public class KitsValueObject extends ValueObject {
 
@@ -8,14 +9,15 @@ public class KitsValueObject extends ValueObject {
 
     private String description;
 
-    private long restrictions;
+    private RestrictionType restriction;
 
     // Constructors
 
-    public KitsValueObject(Kits entity) {
+    public KitsValueObject(Kits entity, RestrictionType restrictionType) {
         this.id = entity.getId();
         this.name = entity.getName();
         this.description = entity.getDescription();
+        this.restriction = restrictionType;
     }
 
     // Getters and Setters
@@ -36,8 +38,8 @@ public class KitsValueObject extends ValueObject {
         this.description = description;
     }
 
-    public long getRestrictions() { return restrictions; }
+    public RestrictionType getRestriction() { return restriction; }
 
-    public void setRestrictions(long restrictions) { this.restrictions = restrictions; }
+    public void setRestrictions(RestrictionType restriction) { this.restriction = restriction; }
 
 }

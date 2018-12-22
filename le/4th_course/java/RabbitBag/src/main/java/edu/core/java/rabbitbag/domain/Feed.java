@@ -2,8 +2,10 @@ package edu.core.java.rabbitbag.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
 
+import java.io.IOException;
 import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

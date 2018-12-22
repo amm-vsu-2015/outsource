@@ -1,25 +1,18 @@
 package edu.core.java.rabbitbag.loader;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import edu.core.java.rabbitbag.Main;
-import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
-import edu.core.java.rabbitbag.domain.FeedType;
 import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.repository.FeedRepository;
+import edu.core.java.rabbitbag.translator.FeedTranslator;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
 
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,31 +29,12 @@ public class FeedLoader extends Loader<JsonFileObject> {
 
             JsonNode node = mapper.readTree(parser);
             List<Feed> feeds = mapper.readValue(node.get("feed").toString(), new TypeReference<List<Feed>>(){});
-            List<Brand> brands = mapper.readValue(node.get("brand").toString(), new TypeReference<List<Brand>>(){});
-            List<FeedType> types = mapper.readValue(node.get("feed_type").toString(), new TypeReference<List<FeedType>>(){});
 
             FeedRepository repository = new FeedRepository();
+            FeedTranslator fTranslator = new FeedTranslator();
 
             for (Feed feed : feeds) {
-
-                Brand feedBrand = null;
-                FeedType feedType = null;
-
-                for (Brand brand : brands) {
-                    if (brand.getId() == feed.getBrand()) {
-                        feedBrand = brand;
-                        break;
-                    }
-                }
-
-                for (FeedType type : types) {
-                    if (type.getId() == feed.getType()) {
-                        feedType = type;
-                        break;
-                    }
-                }
-
-                repository.add(new FeedValueObject(feed, feedBrand, feedType));
+                repository.add(fTranslator.translate(feed, node));
             }
 
             return repository;
@@ -71,11 +45,6 @@ public class FeedLoader extends Loader<JsonFileObject> {
     }
 
     public void upload(FeedRepository feedRepository) {
-        // todo 1: load all available for this repo entities from json
-        // todo 2: load in same repos
-        // todo 3: parse repos and replace some items if they was changed (by id)
-        // todo 4: convert to json and save
-
         try {
             JsonParser parser = getParserFromJsonDB();
 
@@ -90,19 +59,17 @@ public class FeedLoader extends Loader<JsonFileObject> {
                 }
             }
 
-
             List<Feed> feeds = new ArrayList<Feed>();
+            FeedTranslator fTranslator = new FeedTranslator();
 
             for (FeedValueObject feedVO : feedRepository.findAll()) {
-                Feed f = new Feed(feedVO);
-                f.setBrand(3);
-                feeds.add(f);
+                feeds.add(fTranslator.translate(feedVO));
             }
 
             ObjectNode feedTree = (ObjectNode) node;
 
             feedTree.remove("feed");
-            feedTree.put("feed", mapper.valueToTree(feeds));
+            feedTree.set("feed", mapper.valueToTree(feeds));
 
             BufferedWriter writer = getFileWriter();
             mapper.writeValue(writer, feedTree);

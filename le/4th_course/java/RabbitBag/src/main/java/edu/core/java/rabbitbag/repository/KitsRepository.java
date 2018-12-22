@@ -13,7 +13,6 @@ public class KitsRepository extends Repository<KitsValueObject> {
     public void update(KitsValueObject object) {
         int index = collection.indexOf(object);
         collection.set(index, object);
-        // todo update json in file
     }
 
     @Override
