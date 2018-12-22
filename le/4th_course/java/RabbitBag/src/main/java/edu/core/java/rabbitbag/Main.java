@@ -34,7 +34,7 @@ public class Main {
         // get feeds
         feedRepository
                 .findAll()
-                .forEach(fd -> System.out.println(fd.getName()));
+                .forEach(fd -> System.out.println(fd.getBrand()));
 
         feedRepository.remove(1);
 

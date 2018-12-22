@@ -5,10 +5,8 @@ import com.fasterxml.jackson.core.JsonParser;
 import edu.core.java.rabbitbag.Main;
 import edu.core.java.rabbitbag.domain.DomainObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.nio.file.Files;
 
 public class Loader<D extends DomainObject> {
 
@@ -19,6 +17,12 @@ public class Loader<D extends DomainObject> {
         InputStream in = Main.class.getResourceAsStream("/data/data.json");
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         return factory.createParser(in);
+    }
+
+    protected BufferedWriter getFileWriter() throws IOException {
+        ClassLoader classLoader = Main.class.getClassLoader();
+        File file = new File(classLoader.getResource("data/data.json").getFile());
+        return Files.newBufferedWriter(file.toPath());
     }
 
 }

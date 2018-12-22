@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import edu.core.java.rabbitbag.Main;
 import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.FeedType;
@@ -14,7 +15,11 @@ import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,20 +91,25 @@ public class FeedLoader extends Loader<JsonFileObject> {
             }
 
 
+            // update
+
+
             List<Feed> feeds = new ArrayList<Feed>();
 
             for (FeedValueObject feedVO : feedRepository.findAll()) {
-                feeds.add(new Feed(feedVO));
+                Feed f = new Feed(feedVO);
+                f.setBrand(3);
+                feeds.add(f);
             }
 
             ObjectNode feedTree = (ObjectNode) node;
 
-            feedTree.removeAll();
-            feedTree.put("feed", mapper.writeValueAsString(feeds));
+            feedTree.remove("feed");
+            feedTree.put("feed", mapper.valueToTree(feeds));
 
-            System.out.println(feedTree.toString());
+            BufferedWriter writer = getFileWriter();
+            mapper.writeValue(writer, feedTree);
 
-            // todo save to file
         } catch (IOException e) {
             System.out.println(e);
         }

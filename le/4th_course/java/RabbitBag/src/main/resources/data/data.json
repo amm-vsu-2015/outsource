@@ -11,7 +11,8 @@
 
   "brand": [
     { "id": 1, "name": "whis" },
-    { "id": 2, "name": "doggie" }
+    { "id": 2, "name": "doggie" },
+    { "id": 3, "name": "test" }
   ],
 
   "feed": [
