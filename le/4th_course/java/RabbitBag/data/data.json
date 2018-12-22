@@ -1,1 +1,50 @@
-{"feed_type":[{"id":1,"name":"combo food"},{"id":2,"name":"water"}],"restriction_type":[{"id":1,"name":"age"},{"id":2,"name":"health"}],"brand":[{"id":1,"name":"whis"},{"id":2,"name":"lololl"},{"id":3,"name":"test"}],"kits":[{"id":1,"name":"turbo","description":"make rabbit great again","restrictions":1},{"id":2,"name":"lsd","description":"i'm great again","restrictions":2}],"feed":[{"id":2,"name":"pedigree","brand":2,"expiration_term":1577183715000,"type":1}]}
+{
+  "feed_type": [
+    { "id": 1, "name": "combo food" },
+    { "id": 2, "name": "water" }
+  ],
+
+  "restriction_type": [
+    { "id": 1, "name": "age" },
+    { "id": 2, "name": "health" }
+  ],
+
+  "brand": [
+    { "id": 1, "name": "whis" },
+    { "id": 2, "name": "doggie" },
+    { "id": 3, "name": "test" }
+  ],
+
+  "feed": [
+    {
+      "id": 1,
+      "name": "whiskass",
+      "brand": 1,
+      "expiration_term": "2018-12-24T13:35:15+03:00",
+      "type": 1
+    },
+    {
+      "id": 2,
+      "name": "pedigree",
+      "brand": 2,
+      "expiration_term": "2019-12-24T13:35:15+03:00",
+      "type": 1
+    }
+  ],
+
+  "kits": [
+    {
+      "id": 1,
+      "name": "turbo",
+      "description": "make rabbit great again",
+      "restriction": 1
+    },
+    {
+      "id": 2,
+      "name": "lsd",
+      "description": "i'm great again",
+      "restriction": 2
+    }
+  ]
+}
+
