@@ -91,9 +91,6 @@ public class FeedLoader extends Loader<JsonFileObject> {
             }
 
 
-            // update
-
-
             List<Feed> feeds = new ArrayList<Feed>();
 
             for (FeedValueObject feedVO : feedRepository.findAll()) {

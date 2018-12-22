@@ -8,21 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9c910213-fec3-4cc5-ba84-3e64fa4befac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RabbitBag_jar/RabbitBag.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/Loader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,8 +49,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="336">
               <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,68 +92,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java">
+        <entry file="file://$PROJECT_DIR$/data/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="e#222#223#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3231#3237#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/vo/ValueObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#113#114#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#200#201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -201,11 +162,11 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/FeedType.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/RestrictionType.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Kits.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/data/data.json" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" />
       </list>
     </option>
   </component>
@@ -233,12 +194,6 @@
           <item name="RabbitBag" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="RabbitBag" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-          <item name="exec" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
       </expand>
       <select />
     </treeState>
@@ -261,6 +216,11 @@
             <path>
               <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
               <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
@@ -320,6 +280,26 @@
             </path>
             <path>
               <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -365,6 +345,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/assembly" />
       <recent name="$PROJECT_DIR$/src/logging" />
@@ -382,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.RabbitBag-0.1-jar-with-dependencies.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="edu.core.java.rabbitbag.Main" />
       <module name="RabbitBag" />
@@ -425,8 +406,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.RabbitBag-0.1-jar-with-dependencies.jar" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.RabbitBag-0.1-assembler.jar" />
         <item itemvalue="JAR Application.RabbitBag-0.1-unity-builds.jar" />
         <item itemvalue="JAR Application.rb.jar" />
@@ -449,7 +430,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59891000" />
+    <option name="totallyTimeSpent" value="62477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +448,7 @@
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" sideWeight="0.50089765" side_tool="true" weight="0.21745351" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49910232" visible="true" weight="0.22031474" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49910232" visible="true" weight="0.22031474" />
       <window_info id="Structure" order="4" sideWeight="0.50089765" side_tool="true" weight="0.21745351" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -478,7 +459,7 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.3421687" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.3421687" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32891566" />
@@ -493,6 +474,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -810,79 +803,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/FeedRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/data/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="218" lean-forward="true" selection-end-column="465" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-258" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
+        <state relative-caret-position="15">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,13 +828,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        <state relative-caret-position="267">
+          <caret line="110" column="39" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3231#3237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/FeedRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
