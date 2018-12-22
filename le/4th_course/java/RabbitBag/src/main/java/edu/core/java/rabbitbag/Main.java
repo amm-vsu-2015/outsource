@@ -52,13 +52,13 @@ public class Main {
 
             FeedTranslator feedstranslator = new FeedTranslator();
             KitsTranslator kitsTranslator = new KitsTranslator();
-            
+
             // define conditions
 
             List<FeedValueObject> feeds = feedRepository.findAll();
             List<KitsValueObject> kits = kitsRepository.findAll();
 
-            System.out.println("What we are have to store in database now:");
+            System.out.println("What are we have to store in database now:");
 
             if (!feeds.isEmpty()) {
                 System.out.println("Feeds: " + feeds.size());
@@ -68,11 +68,23 @@ public class Main {
                 System.out.println("Kits: " + kits.size());
             }
 
+            // show
+
             feeds.forEach(feedVO -> System.out.println(feedstranslator.translate(feedVO).toJSON()));
             System.out.println();
             kits.forEach(kitVO -> System.out.println(kitsTranslator.translate(kitVO).toJSON()));
+            System.out.println();
 
-            break;
+            // remove
+
+            feedRepository.remove(1);
+            feedRepository.findAll().forEach(feedVO -> System.out.println(feedstranslator.translate(feedVO).toJSON()));
+
+            // upload
+
+            feedLoader.upload(feedRepository);
+
+            if (kits.size() == 1) { break; }
 
         }
     }

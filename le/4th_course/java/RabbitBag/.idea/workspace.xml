@@ -7,33 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c910213-fec3-4cc5-ba84-3e64fa4befac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/FeedTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/DomainObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/DomainObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Kits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Kits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/KitsTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/KitsTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/vo/KitsValueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/vo/KitsValueObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/domain/Feed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/domain/Feed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/translator/Translator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/translator/Translator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+            <state relative-caret-position="531">
+              <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -556,7 +530,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67763000" />
+    <option name="totallyTimeSpent" value="68280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,7 +548,7 @@
       <window_info id="UI Designer" order="0" />
       <window_info id="Favorites" order="1" sideWeight="0.50089765" side_tool="true" weight="0.21745351" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49910232" visible="true" weight="0.22031474" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49910232" visible="true" weight="0.22031474" />
       <window_info id="Structure" order="4" sideWeight="0.50089765" side_tool="true" weight="0.21745351" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -585,7 +559,7 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.24457832" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.24457832" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32891566" />
@@ -1035,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        <state relative-caret-position="531">
+          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
