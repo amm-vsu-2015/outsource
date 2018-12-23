@@ -124,7 +124,7 @@ public class Main {
                         break;
                     }
 
-                    updateFeedBy(Long.valueOf(idChar.toString()), repository, translator);
+                    updateFeedBy(Long.valueOf(idChar.toString()), loader, repository, translator);
 
                     break;
                 case '3':
@@ -162,7 +162,7 @@ public class Main {
         }
     }
 
-    private static void updateFeedBy(long id, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
+    private static void updateFeedBy(long id, FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
         List<FeedValueObject> feedVOs = repository.findAll();
         FeedValueObject selectedVO = null;
 
@@ -180,8 +180,8 @@ public class Main {
         System.out.println(ent.toJSON());
 
         Feed updatedFeed = createFeed(ent.getId(), repository, translator);
-        // repository.update(translator.t);
-
+        repository.update(translator.translate(updatedFeed, loader.getFeedsRootNode()));
+        loader.upload(repository);
         System.out.println();
     }
 

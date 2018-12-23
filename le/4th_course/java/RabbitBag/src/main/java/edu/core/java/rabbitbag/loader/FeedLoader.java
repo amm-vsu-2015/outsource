@@ -18,8 +18,6 @@ import java.util.List;
 
 public class FeedLoader extends Loader<JsonFileObject> {
 
-    private ObjectMapper mapper = new ObjectMapper();
-
     public FeedRepository getRepository() {
 
         try {
