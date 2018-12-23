@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c910213-fec3-4cc5-ba84-3e64fa4befac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RabbitBag-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/core/java/rabbitbag/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+            <state relative-caret-position="370">
+              <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="417">
               <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
@@ -310,18 +305,6 @@
               <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
               <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assembly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,57 +321,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rabbitbag" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rabbitbag" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rabbitbag" type="462c0819:PsiDirectoryNode" />
-              <item name="loader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rabbitbag" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rabbitbag" type="462c0819:PsiDirectoryNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RabbitBag" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RabbitBag" type="b2602c69:ProjectViewProjectNode" />
@@ -527,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70822000" />
+    <option name="totallyTimeSpent" value="72878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,7 +488,7 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.21927711" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.50240964" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32891566" />
@@ -999,15 +931,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="417">
           <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        <state relative-caret-position="370">
+          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

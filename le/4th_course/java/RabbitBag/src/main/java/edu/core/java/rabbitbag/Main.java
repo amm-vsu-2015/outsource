@@ -52,6 +52,7 @@ public class Main {
                 FeedRepository feedRepository = feedLoader.getRepository();
                 KitsRepository kitsRepository = kitsLoader.getRepository();
 
+                // get translators
                 FeedTranslator feedsTranslator = new FeedTranslator();
                 KitsTranslator kitsTranslator = new KitsTranslator();
 
@@ -109,15 +110,39 @@ public class Main {
                 case '1':
                     break;
                 case '2':
+
+                    
+
                     break;
                 case '3':
+
+                    System.out.println("Feeds repository have the next items:");
+
+                    List<FeedValueObject> feedVOs = repository.findAll();
+                    feedVOs.forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
+
+                    Character idChar= askUser("\n Select id index of entity what you want to remove or 'n' to cancel action: ");
+
+                    if (idChar.equals('n')) {
+                        System.out.println("Canceling remove action...");
+                        break;
+                    }
+
+                    long id = Long.parseLong(idChar.toString());
+
+                    for (FeedValueObject vo : feedVOs) {
+                        if (id == vo.getId()) {
+                            repository.remove(id);
+                            break;
+                        }
+                    }
+
                     break;
                 case '4':
                     repository.findAll().forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
             }
         }
     }
-
 
 
     private static Character askUser(String text) throws IOException {
