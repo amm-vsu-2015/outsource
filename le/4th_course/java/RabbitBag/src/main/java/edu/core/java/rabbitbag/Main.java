@@ -16,7 +16,13 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class Main {
 
@@ -82,16 +88,16 @@ public class Main {
 
             }
 
-        } catch (IOException e) {
+        }  catch (IOException|ParseException e) {
             System.out.println(e);
         }
 
     }
 
     // todo maybe abstract with
-    private static void feedsFlow(FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException {
+    private static void feedsFlow(FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
 
-        Character answer = 'y';
+        char answer = 'y';
 
         while (answer != 'n') {
 
@@ -156,7 +162,7 @@ public class Main {
         }
     }
 
-    private static void updateFeedBy(long id, FeedRepository repository, FeedTranslator translator) {
+    private static void updateFeedBy(long id, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
         List<FeedValueObject> feedVOs = repository.findAll();
         FeedValueObject selectedVO = null;
 
@@ -173,12 +179,34 @@ public class Main {
         System.out.println("\nYou selected the next entity:");
         System.out.println(ent.toJSON());
 
+        Feed updatedFeed = createFeed(ent.getId(), repository, translator);
+        // repository.update(translator.t);
+
         System.out.println();
     }
 
-    private static void createFeed(FeedRepository repository, FeedTranslator translator) {
+    private static Feed createFeed(long id, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
         // todo getters / setters of new Feed value
         // todo shows detail table views (as feed_type) in json value.
+
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Write name: ");
+        String name = buffer.readLine().toLowerCase();
+
+        System.out.print("Write brand: ");
+        long brand = Long.valueOf(buffer.readLine().toLowerCase());
+
+        System.out.print("Write date: (as 2018-12-31) ");
+        String dateString = buffer.readLine().toLowerCase();
+        Date date = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH).parse(dateString);
+//        Date date = (Date) LocalDate.parse(dateString, formatter);
+//        System.out.println(date);
+
+        System.out.print("Write type: ");
+        long type = Long.valueOf(buffer.readLine().toLowerCase());
+
+        return new Feed(id, name, brand, date, type);
     }
 
     private static void showFeeds(FeedRepository repository, FeedTranslator translator) {
