@@ -1,15 +1,12 @@
 package edu.core.java.rabbitbag.translator;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.core.java.rabbitbag.domain.Brand;
 import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.FeedType;
-import edu.core.java.rabbitbag.domain.Kits;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
-import edu.core.java.rabbitbag.vo.KitsValueObject;
 
 import java.io.IOException;
 import java.util.List;
