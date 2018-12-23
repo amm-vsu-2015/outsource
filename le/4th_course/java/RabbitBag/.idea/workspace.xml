@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c910213-fec3-4cc5-ba84-3e64fa4befac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
+            <state relative-caret-position="604">
+              <caret line="180" column="70" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="333">
+              <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1228#1229#0" expanded="true" />
@@ -237,9 +238,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/data/data.json" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Kits.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/translator/KitsTranslator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/DomainObject.java" />
         <option value="$PROJECT_DIR$/data/data.json" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java" />
       </list>
     </option>
@@ -459,7 +460,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72878000" />
+    <option name="totallyTimeSpent" value="74130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,32 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1385#1386#0" expanded="true" />
-            <element signature="e#1425#1426#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Kits.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -936,10 +911,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/domain/Feed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/rabbitbag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
+        <state relative-caret-position="604">
+          <caret line="180" column="70" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -95,13 +95,10 @@ public class Main {
 
         while (answer != 'n') {
 
-            System.out.println("\n\n[#] 1. Feeds selected (\" + feeds.size() + \" in store).\n");
+            Character idChar = 'y';
 
-            System.out.println("You have a few actions: ");
-            System.out.println("1. Add new entity.");
-            System.out.println("2. Update entity by id.");
-            System.out.println("3. Remove entity by id.");
-            System.out.println("4. Show entity list.\n");
+            System.out.println("\n\n[#] 1. Feeds selected.\n");
+            printBaseActions();
 
             answer = askUser("Please, select your action number (or write 'n' to back): ");
             System.out.println();
@@ -111,37 +108,91 @@ public class Main {
                     break;
                 case '2':
 
-                    
-
-                    break;
-                case '3':
-
                     System.out.println("Feeds repository have the next items:");
+                    showFeeds(repository, translator);
 
-                    List<FeedValueObject> feedVOs = repository.findAll();
-                    feedVOs.forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
-
-                    Character idChar= askUser("\n Select id index of entity what you want to remove or 'n' to cancel action: ");
+                    idChar = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
 
                     if (idChar.equals('n')) {
                         System.out.println("Canceling remove action...");
                         break;
                     }
 
-                    long id = Long.parseLong(idChar.toString());
+                    updateFeedBy(Long.valueOf(idChar.toString()), repository, translator);
 
-                    for (FeedValueObject vo : feedVOs) {
-                        if (id == vo.getId()) {
-                            repository.remove(id);
-                            break;
-                        }
+                    break;
+                case '3':
+
+                    System.out.println("Feeds repository have the next items:");
+                    showFeeds(repository, translator);
+
+                    idChar= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
+
+                    if (idChar.equals('n')) {
+                        System.out.println("Canceling remove action...");
+                        break;
                     }
+
+                    removeFeedBy(Long.valueOf(idChar.toString()), repository);
 
                     break;
                 case '4':
-                    repository.findAll().forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
+                    showFeeds(repository, translator);
             }
         }
+    }
+
+
+    // feeds flow
+
+    private static void removeFeedBy(long id, FeedRepository repository) {
+        List<FeedValueObject> feedVOs = repository.findAll();
+
+        for (FeedValueObject vo : feedVOs) {
+            if (id == vo.getId()) {
+                repository.remove(id);
+                break;
+            }
+        }
+    }
+
+    private static void updateFeedBy(long id, FeedRepository repository, FeedTranslator translator) {
+        List<FeedValueObject> feedVOs = repository.findAll();
+        FeedValueObject selectedVO = null;
+
+        for (FeedValueObject vo : feedVOs) {
+            if (id == vo.getId()) {
+                // todo: maybe move find by id into entity
+                selectedVO = vo;
+                break;
+            }
+        }
+
+        Feed ent = translator.translate(selectedVO);
+
+        System.out.println("\nYou selected the next entity:");
+        System.out.println(ent.toJSON());
+
+        System.out.println();
+    }
+
+    private static void createFeed(FeedRepository repository, FeedTranslator translator) {
+        // todo getters / setters of new Feed value
+        // todo shows detail table views (as feed_type) in json value.
+    }
+
+    private static void showFeeds(FeedRepository repository, FeedTranslator translator) {
+        repository.findAll().forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
+    }
+
+    // supports
+
+    private static void printBaseActions() {
+        System.out.println("You have a few actions: ");
+        System.out.println("1. Add new entity.");
+        System.out.println("2. Update entity by id.");
+        System.out.println("3. Remove entity by id.");
+        System.out.println("4. Show entity list.\n");
     }
 
 
