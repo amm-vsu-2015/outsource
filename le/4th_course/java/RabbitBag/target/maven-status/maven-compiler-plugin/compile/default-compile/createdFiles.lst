@@ -15,6 +15,7 @@ edu/core/java/rabbitbag/domain/Kits.class
 edu/core/java/rabbitbag/vo/ValueObject.class
 edu/core/java/rabbitbag/loader/FeedLoader.class
 edu/core/java/rabbitbag/translator/KitsTranslator$1.class
+edu/core/java/rabbitbag/infrastructure/FileParser.class
 edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.class
 edu/core/java/rabbitbag/vo/FeedTypeValueObject.class
 edu/core/java/rabbitbag/domain/DomainObject.class

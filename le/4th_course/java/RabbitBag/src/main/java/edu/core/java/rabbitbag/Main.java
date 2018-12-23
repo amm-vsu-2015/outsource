@@ -1,7 +1,6 @@
 package edu.core.java.rabbitbag;
 
 import edu.core.java.rabbitbag.domain.Feed;
-import edu.core.java.rabbitbag.domain.Kits;
 import edu.core.java.rabbitbag.loader.FeedLoader;
 import edu.core.java.rabbitbag.loader.KitsLoader;
 import edu.core.java.rabbitbag.repository.FeedRepository;
@@ -18,8 +17,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -38,7 +35,6 @@ public class Main {
         char answer = 'y';
 
         try {
-
             while (answer != 'n') {
 
                 // todo: get actual data
@@ -71,9 +67,9 @@ public class Main {
                 System.out.println("[ ] 1. Feeds (" + feeds.size() + " in store)");
                 System.out.println("[ ] 2. Kits  (" + kits.size() + " in store)");
 
-                Character flowType = askUser("\nPlease, write number of entity for showing some actions: ");
+                answer = askUser("\nPlease, write number of entity for showing some actions: ");
 
-                switch (flowType) {
+                switch (answer) {
                     case '1':
                         feedsFlow(feedLoader, feedRepository, feedsTranslator);
                         break;
@@ -96,14 +92,11 @@ public class Main {
 
     // todo maybe abstract with
     private static void feedsFlow(FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
-
-        char answer = 'y';
+        Character answer = 'y';
 
         while (answer != 'n') {
 
-            Character idChar = 'y';
-
-            System.out.println("\n\n[#] 1. Feeds selected.\n");
+            System.out.println("\n\n[#] 1. Feeds selected.");
             printBaseActions();
 
             answer = askUser("Please, select your action number (or write 'n' to back): ");
@@ -111,20 +104,23 @@ public class Main {
 
             switch (answer) {
                 case '1':
+                    Feed createdFeed = createFeed((new Date()).getTime(), repository, translator);
+                    repository.add(translator.translate(createdFeed, loader.getFeedsRootNode()));
+                    loader.upload(repository);
                     break;
                 case '2':
 
-                    System.out.println("Feeds repository have the next items:");
+                    System.out.println("Feed's repository have the next items:");
                     showFeeds(repository, translator);
 
-                    idChar = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
+                    answer = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
 
-                    if (idChar.equals('n')) {
+                    if (answer.equals('n')) {
                         System.out.println("Canceling remove action...");
                         break;
                     }
 
-                    updateFeedBy(Long.valueOf(idChar.toString()), loader, repository, translator);
+                    updateFeedBy(Long.valueOf(answer.toString()), loader, repository, translator);
 
                     break;
                 case '3':
@@ -132,14 +128,14 @@ public class Main {
                     System.out.println("Feeds repository have the next items:");
                     showFeeds(repository, translator);
 
-                    idChar= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
+                    answer= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
 
-                    if (idChar.equals('n')) {
+                    if (answer.equals('n')) {
                         System.out.println("Canceling remove action...");
                         break;
                     }
 
-                    removeFeedBy(Long.valueOf(idChar.toString()), repository);
+                    removeFeedBy(Long.valueOf(answer.toString()), repository);
 
                     break;
                 case '4':
@@ -200,8 +196,6 @@ public class Main {
         System.out.print("Write date: (as 2018-12-31) ");
         String dateString = buffer.readLine().toLowerCase();
         Date date = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH).parse(dateString);
-//        Date date = (Date) LocalDate.parse(dateString, formatter);
-//        System.out.println(date);
 
         System.out.print("Write type: ");
         long type = Long.valueOf(buffer.readLine().toLowerCase());
