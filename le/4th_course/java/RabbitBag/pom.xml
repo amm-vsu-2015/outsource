@@ -44,9 +44,12 @@
                 <!--</executions>-->
             <!--</plugin>-->
 
+
+            <!--mvn exec:java after one compile-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -56,10 +59,8 @@
                 </executions>
                 <configuration>
                     <mainClass>edu.core.java.rabbitbag.Main</mainClass>
-                    <includePluginDependencies>true</includePluginDependencies>
                 </configuration>
             </plugin>
-
         </plugins>
 
         <resources>
