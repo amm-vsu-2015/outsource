@@ -19,46 +19,46 @@
                     <!--</archive>-->
                 <!--</configuration>-->
             <!--</plugin>-->
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                        <phase>package</phase> <!-- bind to the packaging phase -->
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <!--<descriptors>-->
-                                <!--<descriptor>src/assembly/src.xml</descriptor>-->
-                            <!--</descriptors>-->
-                            <archive>
-                                <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
-                            </archive>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
             <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>exec-maven-plugin</artifactId>-->
+                <!--<artifactId>maven-assembly-plugin</artifactId>-->
                 <!--<executions>-->
                     <!--<execution>-->
-                        <!--<id>my-execution</id>-->
-                        <!--<phase>package</phase>-->
+                        <!--<id>make-assembly</id> &lt;!&ndash; this is used for inheritance merges &ndash;&gt;-->
+                        <!--<phase>package</phase> &lt;!&ndash; bind to the packaging phase &ndash;&gt;-->
                         <!--<goals>-->
-                            <!--<goal>java</goal>-->
+                            <!--<goal>single</goal>-->
                         <!--</goals>-->
                         <!--<configuration>-->
-                            <!--<mainClass>edu.core.java.rabbitbag.Main</mainClass>-->
+                            <!--<descriptorRefs>-->
+                                <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
+                            <!--</descriptorRefs>-->
+                            <!--&lt;!&ndash;<descriptors>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<descriptor>src/assembly/src.xml</descriptor>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</descriptors>&ndash;&gt;-->
+                            <!--<archive>-->
+                                <!--<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>-->
+                            <!--</archive>-->
                         <!--</configuration>-->
                     <!--</execution>-->
                 <!--</executions>-->
             <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>edu.core.java.rabbitbag.Main</mainClass>
+                    <includePluginDependencies>true</includePluginDependencies>
+                </configuration>
+            </plugin>
 
         </plugins>
 
