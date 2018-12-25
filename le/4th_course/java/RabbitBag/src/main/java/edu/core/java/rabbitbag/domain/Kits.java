@@ -20,6 +20,14 @@ public class Kits extends DomainObject {
 
     public Kits() { super(); }
 
+    public Kits(long id, String name, String description, long restriction) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.restriction = restriction;
+    }
+
     // Convenience
 
     public Kits(KitsValueObject vo) {

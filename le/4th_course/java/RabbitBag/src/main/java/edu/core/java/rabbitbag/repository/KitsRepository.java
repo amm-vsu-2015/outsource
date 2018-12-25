@@ -11,8 +11,12 @@ public class KitsRepository extends Repository<KitsValueObject> {
 
     @Override
     public void update(KitsValueObject object) {
-        int index = collection.indexOf(object);
-        collection.set(index, object);
+        for (int idx_i = 0; idx_i < collection.size(); idx_i++) {
+            if (object.getId() == collection.get(idx_i).getId()) {
+                collection.set(idx_i, object);
+                break;
+            }
+        }
     }
 
     @Override

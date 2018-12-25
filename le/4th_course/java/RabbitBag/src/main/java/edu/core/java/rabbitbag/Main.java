@@ -1,6 +1,7 @@
 package edu.core.java.rabbitbag;
 
 import edu.core.java.rabbitbag.domain.Feed;
+import edu.core.java.rabbitbag.domain.Kits;
 import edu.core.java.rabbitbag.loader.FeedLoader;
 import edu.core.java.rabbitbag.loader.KitsLoader;
 import edu.core.java.rabbitbag.repository.FeedRepository;
@@ -37,15 +38,6 @@ public class Main {
         try {
             while (answer != 'n') {
 
-                // todo: get actual data
-                // todo: print list of created entities on the screen (or add new)
-                // todo: ask user what type of ent will change
-                // todo: show all ent of selected type
-                // todo: show available actions
-                // todo: make some action
-                // todo: update repos & update file
-                // todo: return to 1st step
-
                 // setup loaders
                 FeedLoader feedLoader = new FeedLoader();
                 KitsLoader kitsLoader = new KitsLoader();
@@ -74,7 +66,7 @@ public class Main {
                         feedsFlow(feedLoader, feedRepository, feedsTranslator);
                         break;
                     case '2':
-                        // todo kits flow
+                        kitsFlow(kitsLoader, kitsRepository, kitsTranslator);
                         break;
                     default:
                         System.out.println("\nUnfortunately, entity with this id not found...");
@@ -90,7 +82,6 @@ public class Main {
 
     }
 
-    // todo maybe abstract with
     private static void feedsFlow(FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
         Character answer = 'y';
 
@@ -206,6 +197,124 @@ public class Main {
     private static void showFeeds(FeedRepository repository, FeedTranslator translator) {
         repository.findAll().forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
     }
+
+
+
+
+    // kits flow
+
+    private static void kitsFlow(KitsLoader loader, KitsRepository repository, KitsTranslator translator) throws IOException, ParseException {
+        Character answer = 'y';
+
+        while (answer != 'n') {
+
+            System.out.println("\n\n[#] 1. Kits selected.");
+            printBaseActions();
+
+            answer = askUser("Please, select your action number (or write 'n' to back): ");
+            System.out.println();
+
+            switch (answer) {
+                case '1':
+                    Kits createdKit = createKit((new Date()).getTime(), repository, translator);
+                    repository.add(translator.translate(createdKit, loader.getFeedsRootNode()));
+                    loader.upload(repository);
+                    break;
+                case '2':
+
+                    System.out.println("Kit's repository have the next items:");
+                    showKits(repository, translator);
+
+                    answer = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
+
+                    if (answer.equals('n')) {
+                        System.out.println("Canceling remove action...");
+                        break;
+                    }
+
+                    updateKitBy(Long.valueOf(answer.toString()), loader, repository, translator);
+
+                    break;
+                case '3':
+
+                    System.out.println("Feeds repository have the next items:");
+                    showKits(repository, translator);
+
+                    answer= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
+
+                    if (answer.equals('n')) {
+                        System.out.println("Canceling remove action...");
+                        break;
+                    }
+
+                    removeKitBy(Long.valueOf(answer.toString()), repository);
+
+                    break;
+                case '4':
+                    showKits(repository, translator);
+            }
+        }
+    }
+
+
+    // feeds flow
+
+    private static void removeKitBy(long id, KitsRepository repository) {
+        List<KitsValueObject> KitVOs = repository.findAll();
+
+        for (KitsValueObject vo : KitVOs) {
+            if (id == vo.getId()) {
+                repository.remove(id);
+                break;
+            }
+        }
+    }
+
+    private static void updateKitBy(long id, KitsLoader loader, KitsRepository repository, KitsTranslator translator) throws IOException, ParseException {
+        List<KitsValueObject> KitVOs = repository.findAll();
+        KitsValueObject selectedVO = null;
+
+        for (KitsValueObject vo : KitVOs) {
+            if (id == vo.getId()) {
+                selectedVO = vo;
+                break;
+            }
+        }
+
+        Kits ent = translator.translate(selectedVO);
+
+        System.out.println("\nYou selected the next entity:");
+        System.out.println(ent.toJSON());
+
+        Kits updatedKit = createKit(ent.getId(), repository, translator);
+        repository.update(translator.translate(updatedKit, loader.getFeedsRootNode()));
+        loader.upload(repository);
+        System.out.println();
+    }
+
+    private static Kits createKit(long id, KitsRepository repository, KitsTranslator translator) throws IOException, ParseException {
+
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Write name: ");
+        String name = buffer.readLine().toLowerCase();
+
+        System.out.print("Write description: ");
+        String description = buffer.readLine().toLowerCase();
+
+        System.out.print("Write restruction: ");
+        long restriction = Long.valueOf(buffer.readLine().toLowerCase());
+
+        return new Kits(id, name, description, restriction);
+    }
+
+    private static void showKits(KitsRepository repository, KitsTranslator translator) {
+        repository.findAll().forEach(feedVO -> System.out.println(translator.translate(feedVO).toJSON()));
+    }
+
+
+
+
 
     // supports
 

@@ -47,15 +47,6 @@ public class FeedLoader extends Loader<JsonFileObject> {
             JsonParser parser = getParserFromJsonDB();
 
             JsonNode node = mapper.readTree(parser);
-            JsonNode brandTree = node.get("brand");
-
-            for (JsonNode brandNode : brandTree) {
-                Long id = mapper.readValue(brandNode.get("id").toString(), Long.class);
-                if (id == 2) {
-                    ObjectNode on = ((ObjectNode) brandNode).put("name", "lololl");
-                    break;
-                }
-            }
 
             List<Feed> feeds = new ArrayList<Feed>();
             FeedTranslator fTranslator = new FeedTranslator();
