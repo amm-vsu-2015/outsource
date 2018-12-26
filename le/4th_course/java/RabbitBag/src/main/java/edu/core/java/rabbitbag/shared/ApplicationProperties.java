@@ -30,8 +30,9 @@ public class ApplicationProperties {
     }
 
     public String getDatabaseType() {
-        // is development
-        return isDevelopment ? properties.getProperty("databaseType.dev") : properties.getProperty("databaseType.prd");
+        return isDevelopment
+                ? properties.getProperty("databaseType.dev")
+                : properties.getProperty("databaseType.prd");
     }
 
     public boolean isDevelopment() {
