@@ -1,6 +1,7 @@
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/BrandValueObject.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/infrastructure/FileParser.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/KitsValueObject.java
+/Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/shared/ApplicationProperties.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/Main.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/loader/Loader.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/FeedType.java

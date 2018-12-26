@@ -6,6 +6,7 @@ import edu.core.java.rabbitbag.loader.FeedLoader;
 import edu.core.java.rabbitbag.loader.KitsLoader;
 import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.repository.KitsRepository;
+import edu.core.java.rabbitbag.shared.ApplicationProperties;
 import edu.core.java.rabbitbag.translator.FeedTranslator;
 import edu.core.java.rabbitbag.translator.KitsTranslator;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
@@ -55,7 +56,7 @@ public class Main {
                 List<FeedValueObject> feeds = feedRepository.findAll();
                 List<KitsValueObject> kits = kitsRepository.findAll();
 
-                System.out.println("\nWhat are we have to store in database now:");
+                System.out.println("\nWhat are we have to store in " + ApplicationProperties.shared().getDatabaseType() + " now:");
                 System.out.println("[ ] 1. Feeds (" + feeds.size() + " in store)");
                 System.out.println("[ ] 2. Kits  (" + kits.size() + " in store)");
 
