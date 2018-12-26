@@ -66,6 +66,7 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
                 <excludes>
                     <exclude>logback.xml</exclude>
                 </excludes>
@@ -78,6 +79,21 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <envType>dev</envType>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prd</id>
+            <properties>
+                <envType>prd</envType>
+            </properties>
+        </profile>
+    </profiles>
     <dependencies>
 
         <dependency>

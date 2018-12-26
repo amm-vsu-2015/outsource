@@ -23,6 +23,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+// configs
+// exec:java -D envType=dev // dev environment
+
 public class Main {
 
     // javac -d out src/main/java/edu/core/java/rabbitbag/Main.java

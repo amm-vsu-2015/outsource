@@ -1,8 +1,5 @@
 package edu.core.java.rabbitbag.shared;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import edu.core.java.rabbitbag.Main;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -10,7 +7,7 @@ import java.util.Properties;
 public class ApplicationProperties {
 
     private Properties properties;
-    private Bool isDevelopment;
+    private boolean isDevelopment = System.getProperty("envType").equals("dev");
 
     private ApplicationProperties() {
         properties = new Properties();
@@ -34,7 +31,11 @@ public class ApplicationProperties {
 
     public String getDatabaseType() {
         // is development
-        return true ? properties.getProperty("databaseType.dev") : properties.getProperty("databaseType.prd");
+        return isDevelopment ? properties.getProperty("databaseType.dev") : properties.getProperty("databaseType.prd");
+    }
+
+    public boolean isDevelopment() {
+        return isDevelopment;
     }
 
 }

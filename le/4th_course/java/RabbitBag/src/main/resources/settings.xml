@@ -6,23 +6,16 @@
     <profiles>
         <profile>
             <id>dev</id>
-            <activation>
-                <property>
-                    <name>env</name>
-                    <value>dev</value>
-                </property>
-
-            </activation>
+            <properties>
+                <envType>dev</envType>
+            </properties>
         </profile>
 
         <profile>
             <id>prd</id>
-            <activation>
-                <property>
-                    <name>env</name>
-                    <value>prod</value>
-                </property>
-            </activation>
+            <properties>
+                <envType>prd</envType>
+            </properties>
         </profile>
     </profiles>
 </settings>
