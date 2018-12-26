@@ -8,7 +8,7 @@ public class FeedTypeValueObject extends ValueObject {
 
     // Constructors
 
-    public FeedTypeValueObject(FeedType entity) {
+    FeedTypeValueObject(FeedType entity) {
         this.id = entity.getId();
         this.name = entity.getName();
     }

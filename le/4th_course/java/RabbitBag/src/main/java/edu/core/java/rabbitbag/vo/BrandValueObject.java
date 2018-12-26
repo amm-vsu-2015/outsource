@@ -8,7 +8,7 @@ public class BrandValueObject extends ValueObject {
 
     // Constructors
 
-    public BrandValueObject(Brand entity) {
+    BrandValueObject(Brand entity) {
         this.id = entity.getId();
         this.name = entity.getName();
     }

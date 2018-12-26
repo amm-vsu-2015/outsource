@@ -5,14 +5,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import edu.core.java.rabbitbag.domain.Feed;
-import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.domain.Kits;
-import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.repository.KitsRepository;
-import edu.core.java.rabbitbag.translator.FeedTranslator;
 import edu.core.java.rabbitbag.translator.KitsTranslator;
-import edu.core.java.rabbitbag.vo.FeedValueObject;
 import edu.core.java.rabbitbag.vo.KitsValueObject;
 
 import java.io.BufferedWriter;
@@ -20,24 +15,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KitsLoader extends Loader<JsonFileObject> {
+public class KitsLoader extends Loader<Kits> {
 
-    public KitsRepository getRepository() {
+    public KitsRepository download() {
         ObjectMapper mapper = new ObjectMapper();
 
         try {
-            JsonParser parser = getParserFromJsonDB();
-
-            // collect object
-
-            JsonNode node = mapper.readTree(parser);
+            JsonNode node = getRootNode();
             List<Kits> kits = mapper.readValue(node.get("kits").toString(), new TypeReference<List<Kits>>(){});
 
             KitsRepository repository = new KitsRepository();
-            KitsTranslator kTranslator = new KitsTranslator();
+            KitsTranslator translator = new KitsTranslator();
 
             for (Kits kit : kits) {
-                repository.add(kTranslator.translate(kit, node));
+                repository.add(translator.translate(kit, node));
             }
 
             return repository;
@@ -49,24 +40,22 @@ public class KitsLoader extends Loader<JsonFileObject> {
 
     public void upload(KitsRepository kitsRepository) {
         try {
-            JsonParser parser = getParserFromJsonDB();
-
-            JsonNode node = mapper.readTree(parser);
-
-            List<Kits> Kits = new ArrayList<Kits>();
-            KitsTranslator kTranslator = new KitsTranslator();
+            List<Kits> kits = new ArrayList<Kits>();
+            KitsTranslator translator = new KitsTranslator();
 
             for (KitsValueObject feedVO : kitsRepository.findAll()) {
-                Kits.add(kTranslator.translate(feedVO));
+                kits.add(translator.translate(feedVO));
             }
 
-            ObjectNode KitsTree = (ObjectNode) node;
+            // update
 
-            KitsTree.remove("Kits");
-            KitsTree.set("kits", mapper.valueToTree(Kits));
+            ObjectNode tree = (ObjectNode) getRootNode();
+            tree.set("kits", mapper.valueToTree(kits));
+
+            // write
 
             BufferedWriter writer = getFileWriter();
-            mapper.writeValue(writer, KitsTree);
+            mapper.writeValue(writer, tree);
 
         } catch (IOException e) {
             System.out.println(e);

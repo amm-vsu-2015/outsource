@@ -8,8 +8,6 @@
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/RestrictionType.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/KitsTranslator.java
-/Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/JsonFileObject.java
-/Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/helpers/FeedSerializer.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/FeedTranslator.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/FeedValueObject.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/FeedTypeValueObject.java

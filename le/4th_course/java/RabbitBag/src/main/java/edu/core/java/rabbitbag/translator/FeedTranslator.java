@@ -20,24 +20,24 @@ public class FeedTranslator implements Translator<FeedValueObject, Feed> {
         List<Brand> brands = mapper.readValue(root.get("brand").toString(), new TypeReference<List<Brand>>(){});
         List<FeedType> types = mapper.readValue(root.get("feed_type").toString(), new TypeReference<List<FeedType>>(){});
 
-        Brand feedBrand = null;
-        FeedType feedType = null;
+        Brand brand = null;
+        FeedType type = null;
 
-        for (Brand brand : brands) {
-            if (brand.getId() == domain.getBrand()) {
-                feedBrand = brand;
+        for (Brand b : brands) {
+            if (b.getId() == domain.getBrand()) {
+                brand = b;
                 break;
             }
         }
 
-        for (FeedType type : types) {
-            if (type.getId() == domain.getType()) {
-                feedType = type;
+        for (FeedType t : types) {
+            if (t.getId() == domain.getType()) {
+                type = t;
                 break;
             }
         }
 
-        return new FeedValueObject(domain, feedBrand, feedType);
+        return new FeedValueObject(domain, brand, type);
     }
 
     @Override

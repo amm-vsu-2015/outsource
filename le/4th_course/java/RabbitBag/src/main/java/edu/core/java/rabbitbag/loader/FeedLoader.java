@@ -3,10 +3,8 @@ package edu.core.java.rabbitbag.loader;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import edu.core.java.rabbitbag.domain.Feed;
-import edu.core.java.rabbitbag.domain.JsonFileObject;
 import edu.core.java.rabbitbag.repository.FeedRepository;
 import edu.core.java.rabbitbag.translator.FeedTranslator;
 import edu.core.java.rabbitbag.vo.FeedValueObject;
@@ -16,23 +14,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FeedLoader extends Loader<JsonFileObject> {
+public class FeedLoader extends Loader<Feed> {
 
     public FeedRepository getRepository() {
 
         try {
-            JsonParser parser = getParserFromJsonDB();
-
-            // collect object
-
-            JsonNode node = mapper.readTree(parser);
+            JsonNode node = getRootNode();
             List<Feed> feeds = mapper.readValue(node.get("feed").toString(), new TypeReference<List<Feed>>(){});
 
             FeedRepository repository = new FeedRepository();
-            FeedTranslator fTranslator = new FeedTranslator();
+            FeedTranslator translator = new FeedTranslator();
 
             for (Feed feed : feeds) {
-                repository.add(fTranslator.translate(feed, node));
+                repository.add(translator.translate(feed, node));
             }
 
             return repository;
@@ -44,25 +38,23 @@ public class FeedLoader extends Loader<JsonFileObject> {
 
     public void upload(FeedRepository feedRepository) {
         try {
-            JsonParser parser = getParserFromJsonDB();
-
-            JsonNode node = mapper.readTree(parser);
-
             List<Feed> feeds = new ArrayList<Feed>();
-            FeedTranslator fTranslator = new FeedTranslator();
+            FeedTranslator translator = new FeedTranslator();
 
             for (FeedValueObject feedVO : feedRepository.findAll()) {
-                feeds.add(fTranslator.translate(feedVO));
+                feeds.add(translator.translate(feedVO));
             }
 
-            ObjectNode feedTree = (ObjectNode) node;
+            // update
 
-            feedTree.remove("feed");
-            feedTree.set("feed", mapper.valueToTree(feeds));
+            ObjectNode tree = (ObjectNode) getRootNode();
+            tree.remove("feed");
+            tree.set("feed", mapper.valueToTree(feeds));
+
+            // write
 
             BufferedWriter writer = getFileWriter();
-            mapper.writeValue(writer, feedTree);
-
+            mapper.writeValue(writer, tree);
         } catch (IOException e) {
             System.out.println(e);
         }

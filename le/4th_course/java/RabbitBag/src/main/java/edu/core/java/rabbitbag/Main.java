@@ -48,7 +48,7 @@ public class Main {
 
                 // get repos
                 FeedRepository feedRepository = feedLoader.getRepository();
-                KitsRepository kitsRepository = kitsLoader.getRepository();
+                KitsRepository kitsRepository = kitsLoader.download();
 
                 // get translators
                 FeedTranslator feedsTranslator = new FeedTranslator();
@@ -100,7 +100,7 @@ public class Main {
             switch (answer) {
                 case '1':
                     Feed createdFeed = createFeed((new Date()).getTime(), repository, translator);
-                    repository.add(translator.translate(createdFeed, loader.getFeedsRootNode()));
+                    repository.add(translator.translate(createdFeed, loader.getRootNode()));
                     loader.upload(repository);
                     break;
                 case '2':
@@ -171,7 +171,7 @@ public class Main {
         System.out.println(ent.toJSON());
 
         Feed updatedFeed = createFeed(ent.getId(), repository, translator);
-        repository.update(translator.translate(updatedFeed, loader.getFeedsRootNode()));
+        repository.update(translator.translate(updatedFeed, loader.getRootNode()));
         loader.upload(repository);
         System.out.println();
     }
@@ -221,7 +221,7 @@ public class Main {
             switch (answer) {
                 case '1':
                     Kits createdKit = createKit((new Date()).getTime(), repository, translator);
-                    repository.add(translator.translate(createdKit, loader.getFeedsRootNode()));
+                    repository.add(translator.translate(createdKit, loader.getRootNode()));
                     loader.upload(repository);
                     break;
                 case '2':
@@ -291,7 +291,7 @@ public class Main {
         System.out.println(ent.toJSON());
 
         Kits updatedKit = createKit(ent.getId(), repository, translator);
-        repository.update(translator.translate(updatedKit, loader.getFeedsRootNode()));
+        repository.update(translator.translate(updatedKit, loader.getRootNode()));
         loader.upload(repository);
         System.out.println();
     }
