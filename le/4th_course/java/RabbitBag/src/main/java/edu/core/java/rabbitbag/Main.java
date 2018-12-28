@@ -2,7 +2,6 @@ package edu.core.java.rabbitbag;
 
 import edu.core.java.rabbitbag.domain.Feed;
 import edu.core.java.rabbitbag.domain.Kits;
-import edu.core.java.rabbitbag.infrastructure.DatabaseManager;
 import edu.core.java.rabbitbag.loader.FeedLoader;
 import edu.core.java.rabbitbag.loader.KitsLoader;
 import edu.core.java.rabbitbag.repository.FeedRepository;
@@ -18,8 +17,6 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -162,7 +159,6 @@ public class Main {
 
         for (FeedValueObject vo : feedVOs) {
             if (id == vo.getId()) {
-                // todo: maybe move find by id into entity
                 selectedVO = vo;
                 break;
             }
