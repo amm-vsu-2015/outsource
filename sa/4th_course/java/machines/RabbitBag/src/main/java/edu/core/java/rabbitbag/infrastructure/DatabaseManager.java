@@ -19,16 +19,6 @@ public class DatabaseManager {
 
     }
 
-//    DatabaseManager d = new DatabaseManager();
-//        d.setupConnection();
-//    Connection c = d.getConnection();
-//
-//        c.nativeSQL("CREATE TABLE brand (id UNIQUE PRIMARY KEY, text VARCHAR(150) NOT NULL)");
-//        c.commit();
-//        c.nativeSQL("INSERT INTO brand (`name`) VALUES (`bobby`)");
-//        c.commit();
-//        System.out.println(c.nativeSQL("SELECT * FROM brand"));
-
     public Connection getConnection() throws SQLException, ClassNotFoundException {
         return DriverManager.getConnection(ds.getJdbcUrl());
     }

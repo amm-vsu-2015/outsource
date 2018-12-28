@@ -42,9 +42,21 @@ public class Main {
 
         char answer = 'y';
 
+        DatabaseManager d = new DatabaseManager();
+        d.setupConnection();
+
         try {
             while (answer != 'n') {
 
+                Connection c = d.getConnection();
+
+                c.nativeSQL("CREATE TABLE brand (id UNIQUE PRIMARY KEY, text VARCHAR(150) NOT NULL)");
+                c.commit();
+
+                c.nativeSQL("INSERT INTO brand (`name`) VALUES (`bobby`)");
+                c.commit();
+
+                System.out.println(c.nativeSQL("SELECT * FROM brand"));
                 // setup loaders
                 FeedLoader feedLoader = new FeedLoader();
                 KitsLoader kitsLoader = new KitsLoader();
@@ -83,7 +95,7 @@ public class Main {
 
             }
 
-        }  catch (IOException|ParseException e) {
+        }  catch (IOException|ParseException|SQLException|ClassNotFoundException e) {
             System.out.println(e);
         }
 

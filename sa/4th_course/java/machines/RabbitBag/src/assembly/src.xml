@@ -1,0 +1,12 @@
+<assembly>
+    <!--<id>jar-with-dependencies</id>-->
+    <id>src</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+</assembly>
