@@ -16,6 +16,7 @@
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/ValueObject.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/repository/Repository.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/Translator.java
+/Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/infrastructure/DatabaseManager.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/Feed.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.java
 /Users/pavel/Projects/University/labs/outsource/le/4th_course/java/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/DomainObject.java

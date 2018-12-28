@@ -5,6 +5,7 @@ edu/core/java/rabbitbag/translator/FeedTranslator$2.class
 edu/core/java/rabbitbag/domain/Feed.class
 edu/core/java/rabbitbag/translator/Translator.class
 edu/core/java/rabbitbag/loader/FeedLoader$1.class
+edu/core/java/rabbitbag/infrastructure/DatabaseManager.class
 edu/core/java/rabbitbag/domain/Brand.class
 edu/core/java/rabbitbag/translator/FeedTranslator$1.class
 edu/core/java/rabbitbag/Main.class

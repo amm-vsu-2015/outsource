@@ -6,15 +6,25 @@
     <profiles>
         <profile>
             <id>dev</id>
-            <properties>
-                <envType>dev</envType>
-            </properties>
+            <!--<properties>-->
+                <!--<envType>dev</envType>-->
+            <!--</properties>-->
         </profile>
 
         <profile>
             <id>prd</id>
+            <activation>
+                <!-- activate if system properties 'env=prod' -->
+                <property>
+                    <name>env</name>
+                    <value>prod</value>
+                </property>
+            </activation>
             <properties>
-                <envType>prd</envType>
+                <db.driverClassName>com.mysql.jdbc.Driver</db.driverClassName>
+                <db.url>jdbc:mysql://cs01:3306/prod</db.url>
+                <db.username>rabbit</db.username>
+                <db.password>8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</db.password>
             </properties>
         </profile>
     </profiles>
