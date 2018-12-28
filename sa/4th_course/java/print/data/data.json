@@ -9,10 +9,9 @@
     { "id": 2, "name": "health" }
   ],
 
-  "brand": [
-    { "id": 1, "name": "whis" },
-    { "id": 2, "name": "doggie" },
-    { "id": 3, "name": "test" }
+  "company": [
+    { "id": 1, "name": "papper street" },
+    { "id": 2, "name": "delfish" }
   ],
 
   "feed": [

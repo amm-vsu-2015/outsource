@@ -2,147 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c405cb1-4ca6-4eee-ba53-ddb6b6b3a952" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Brand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/DomainObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Feed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/FeedType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Kits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/RestrictionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/infrastructure/DatabaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/infrastructure/FileParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/KitsLoader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/KitsLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/FeedRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/KitsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties$Holder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/SharedLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/Translator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/BrandValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/FeedTypeValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/FeedValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/KitsValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../le/4th_course/java/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/ValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/artifacts/RabbitBag_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/RabbitBag.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/data/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/out/artifacts/RabbitBag_jar/RabbitBag.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/assembly/src.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/logging/logback-access.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/Brand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/DomainObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/Feed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/FeedType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/Kits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/domain/RestrictionType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/infrastructure/DatabaseManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/infrastructure/FileParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/lb/liq_init.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/loader/FeedLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/loader/KitsLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/loader/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/repository/FeedRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/repository/KitsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/repository/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/shared/ApplicationProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/shared/SharedLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/FeedTranslator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/KitsTranslator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/translator/Translator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/BrandValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/FeedTypeValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/FeedValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/KitsValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/java/edu/core/java/rabbitbag/vo/ValueObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/resources/data/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/resources/liquibase/liquibase.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/src/main/resources/settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/META-INF/RabbitBag.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/data/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Brand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/DomainObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Feed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/FeedType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/Kits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/domain/RestrictionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/infrastructure/DatabaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/infrastructure/FileParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/FeedLoader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/FeedLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/KitsLoader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/KitsLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/loader/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/FeedRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/KitsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/repository/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties$Holder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/ApplicationProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/shared/SharedLogger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/FeedTranslator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/KitsTranslator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/translator/Translator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/BrandValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/FeedTypeValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/FeedValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/KitsValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/RestrictionTypeValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/edu/core/java/rabbitbag/vo/ValueObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/liquibase/liquibase.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/classes/settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../machines/RabbitBag/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -155,12 +15,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/shared/ApplicationProperties.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="388">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/print.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/shared/ApplicationProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
                 <element signature="e#813#814#0" expanded="true" />
               </folding>
             </state>
@@ -170,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="225">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -181,24 +63,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/vo/BrandValueObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -302,19 +166,10 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="prd" />
-      </list>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
-        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="print" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -527,12 +382,12 @@
       <updated>1545992145071</updated>
       <workItem from="1545992146416" duration="168000" />
       <workItem from="1545992325408" duration="709000" />
-      <workItem from="1545993040452" duration="22000" />
+      <workItem from="1545993040452" duration="441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="899000" />
+    <option name="totallyTimeSpent" value="1318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -543,6 +398,7 @@
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
@@ -657,16 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/translator/FeedTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -729,17 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/shared/ApplicationProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -747,12 +582,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/data.json">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/shared/ApplicationProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="360">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/core/java/print/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="-X exec:java -D envType=dev" />
+    <option value="-X exec:java -P prd" />
   </component>
 </project>

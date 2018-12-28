@@ -28,14 +28,16 @@ import java.util.Locale;
 
 public class Main {
 
+    private static Logger logger = LoggerFactory.getLogger("edu.core.java.rabbitbag.Main");
+
     // javac -d out src/main/java/edu/core/java/rabbitbag/Main.java
     // out
     // jar cmvf ../src/main/resources/META-INF/manifest.mf ../out/rb.jar edu/core/java/rabbitbag/Main.class
     // cd ..
     // java -jar ./out/rb.jar
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger("edu.core.java.rabbitbag.Main");
-        logger.debug("Hello, debugger!");
+
+        logger.debug("Начало выполнения программы");
 
         char answer = 'y';
 
@@ -59,11 +61,11 @@ public class Main {
                 List<FeedValueObject> feeds = feedRepository.findAll();
                 List<KitsValueObject> kits = kitsRepository.findAll();
 
-                System.out.println("\nWhat are we have to store in " + ApplicationProperties.shared().getDatabaseType() + " now:");
-                System.out.println("[ ] 1. Feeds (" + feeds.size() + " in store)");
-                System.out.println("[ ] 2. Kits  (" + kits.size() + " in store)");
+                System.out.println("\nВ базе данных " + ApplicationProperties.shared().getDatabaseType() + " хранятся следующие сущности:");
+                System.out.println("[ ] 1. Питание (" + feeds.size() + " шт.)");
+                System.out.println("[ ] 2. Наборы  (" + kits.size() + " шт.)");
 
-                answer = askUser("\nPlease, write number of entity for showing some actions: ");
+                answer = askUser("\nВыберите номер необходимой сущности, чтобы посмотреть доступные действия: (или 'n' для отмены) ");
 
                 switch (answer) {
                     case '1':
@@ -73,10 +75,10 @@ public class Main {
                         kitsFlow(kitsLoader, kitsRepository, kitsTranslator);
                         break;
                     default:
-                        System.out.println("\nUnfortunately, entity with this id not found...");
+                        System.out.println("\nК сожалению, такой сущности не существует...");
                 }
 
-                System.out.println("Please, try again...\n\n");
+                System.out.println("Попробуйте снова...\n\n");
 
             }
 
@@ -88,13 +90,15 @@ public class Main {
 
     private static void feedsFlow(FeedLoader loader, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
         Character answer = 'y';
+        String id = "";
+        BufferedReader buffer;
 
         while (answer != 'n') {
 
-            System.out.println("\n\n[#] 1. Feeds selected.");
+            System.out.println("\n\n[#] 1. Выбрано 'питание'.");
             printBaseActions();
 
-            answer = askUser("Please, select your action number (or write 'n' to back): ");
+            answer = askUser("Вам доступны следующие действия, выберите номер (или 'n' для отмены): ");
             System.out.println();
 
             switch (answer) {
@@ -102,35 +106,42 @@ public class Main {
                     Feed createdFeed = createFeed((new Date()).getTime(), repository, translator);
                     repository.add(translator.translate(createdFeed, loader.getRootNode()));
                     loader.upload(repository);
+                    logger.debug("Сущность Feed создана");
                     break;
                 case '2':
 
-                    System.out.println("Feed's repository have the next items:");
+                    System.out.println("В репозитории 'питание' находятся следующие сущности:");
                     showFeeds(repository, translator);
 
-                    answer = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
+                    System.out.print("\nВыберите номер 'id' для [ обновления ] сущности (или 'n' для отмены): ");
+                    buffer = new BufferedReader(new InputStreamReader(System.in));
+                    id = buffer.readLine().toLowerCase();
 
-                    if (answer.equals('n')) {
-                        System.out.println("Canceling remove action...");
+                    if (id.equals('n')) {
+                        System.out.println("Отмена обновления сущностей...");
                         break;
                     }
 
-                    updateFeedBy(Long.valueOf(answer.toString()), loader, repository, translator);
+                    updateFeedBy(Long.valueOf(id.toString()), loader, repository, translator);
+                    logger.debug("Сущность Feed обновлена");
 
                     break;
                 case '3':
 
-                    System.out.println("Feeds repository have the next items:");
+                    System.out.println("В репозитории 'питание' находятся следующие сущности:");
                     showFeeds(repository, translator);
 
-                    answer= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
+                    System.out.print("\nВыберите номер 'id' для [ удаления ] сущности (или 'n' для отмены): ");
+                    buffer = new BufferedReader(new InputStreamReader(System.in));
+                    id = buffer.readLine().toLowerCase();
 
-                    if (answer.equals('n')) {
-                        System.out.println("Canceling remove action...");
+                    if (id.equals('n')) {
+                        System.out.println("Отмена обновления сущностей...");
                         break;
                     }
 
-                    removeFeedBy(Long.valueOf(answer.toString()), repository);
+                    removeFeedBy(Long.valueOf(id.toString()), repository);
+                    logger.debug("Сущность Feed удалена");
 
                     break;
                 case '4':
@@ -166,7 +177,7 @@ public class Main {
 
         Feed ent = translator.translate(selectedVO);
 
-        System.out.println("\nYou selected the next entity:");
+        System.out.println("\nВыбрана следующая сущность для обновления:");
         System.out.println(ent.toJSON());
 
         Feed updatedFeed = createFeed(ent.getId(), repository, translator);
@@ -176,22 +187,20 @@ public class Main {
     }
 
     private static Feed createFeed(long id, FeedRepository repository, FeedTranslator translator) throws IOException, ParseException {
-        // todo getters / setters of new Feed value
-        // todo shows detail table views (as feed_type) in json value.
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.print("Write name: ");
+        System.out.print("Введите имя: ");
         String name = buffer.readLine().toLowerCase();
 
-        System.out.print("Write brand: ");
+        System.out.print("Введите id бренда: ");
         long brand = Long.valueOf(buffer.readLine().toLowerCase());
 
-        System.out.print("Write date: (as 2018-12-31) ");
+        System.out.print("Введите дату: (в формате 2018-12-31) ");
         String dateString = buffer.readLine().toLowerCase();
         Date date = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH).parse(dateString);
 
-        System.out.print("Write type: ");
+        System.out.print("Введите тип питания (по id): ");
         long type = Long.valueOf(buffer.readLine().toLowerCase());
 
         return new Feed(id, name, brand, date, type);
@@ -208,13 +217,15 @@ public class Main {
 
     private static void kitsFlow(KitsLoader loader, KitsRepository repository, KitsTranslator translator) throws IOException, ParseException {
         Character answer = 'y';
+        String id = "";
+        BufferedReader buffer;
 
         while (answer != 'n') {
 
-            System.out.println("\n\n[#] 1. Kits selected.");
+            System.out.println("\n\n[#] 1. Выбрано 'наборы'.");
             printBaseActions();
 
-            answer = askUser("Please, select your action number (or write 'n' to back): ");
+            answer = askUser("Вам доступны следующие действия, выберите номер (или 'n' для отмены): ");
             System.out.println();
 
             switch (answer) {
@@ -222,35 +233,42 @@ public class Main {
                     Kits createdKit = createKit((new Date()).getTime(), repository, translator);
                     repository.add(translator.translate(createdKit, loader.getRootNode()));
                     loader.upload(repository);
+                    logger.debug("Сущность kits создана");
                     break;
                 case '2':
 
-                    System.out.println("Kit's repository have the next items:");
+                    System.out.println("В репозитории 'питание' находятся следующие сущности:");
                     showKits(repository, translator);
 
-                    answer = askUser("\nSelect id index of entity what you want to [ update ] or 'n' to cancel action: ");
+                    System.out.print("\nВыберите номер 'id' для [ обновления ] сущности (или 'n' для отмены): ");
+                    buffer = new BufferedReader(new InputStreamReader(System.in));
+                    id = buffer.readLine().toLowerCase();
 
-                    if (answer.equals('n')) {
-                        System.out.println("Canceling remove action...");
+                    if (id.equals("n")) {
+                        System.out.println("Отмена обновления сущностей...");
                         break;
                     }
 
-                    updateKitBy(Long.valueOf(answer.toString()), loader, repository, translator);
+                    updateKitBy(Long.valueOf(id.toString()), loader, repository, translator);
+                    logger.debug("Сущность kits обновлена");
 
                     break;
                 case '3':
 
-                    System.out.println("Feeds repository have the next items:");
+                    System.out.println("В репозитории 'питание' находятся следующие сущности:");
                     showKits(repository, translator);
 
-                    answer= askUser("\nSelect id index of entity what you want to [ remove ] or 'n' to cancel action: ");
+                    System.out.print("\nВыберите номер 'id' для [ удаления ] сущности (или 'n' для отмены): ");
+                    buffer = new BufferedReader(new InputStreamReader(System.in));
+                    id = buffer.readLine().toLowerCase();
 
-                    if (answer.equals('n')) {
-                        System.out.println("Canceling remove action...");
+                    if (id.equals("n")) {
+                        System.out.println("Отмена обновления сущностей...");
                         break;
                     }
 
-                    removeKitBy(Long.valueOf(answer.toString()), repository);
+                    removeKitBy(Long.valueOf(id.toString()), repository);
+                    logger.debug("Сущность kits удалена");
 
                     break;
                 case '4':
@@ -299,13 +317,13 @@ public class Main {
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.print("Write name: ");
+        System.out.print("Введите имя: ");
         String name = buffer.readLine().toLowerCase();
 
-        System.out.print("Write description: ");
+        System.out.print("Введите описание: ");
         String description = buffer.readLine().toLowerCase();
 
-        System.out.print("Write restruction: ");
+        System.out.print("Введите ограничение (по id): ");
         long restriction = Long.valueOf(buffer.readLine().toLowerCase());
 
         return new Kits(id, name, description, restriction);
@@ -322,11 +340,11 @@ public class Main {
     // supports
 
     private static void printBaseActions() {
-        System.out.println("You have a few actions: ");
-        System.out.println("1. Add new entity.");
-        System.out.println("2. Update entity by id.");
-        System.out.println("3. Remove entity by id.");
-        System.out.println("4. Show entity list.\n");
+        System.out.println("Список доступных действия с сущностями: ");
+        System.out.println("1. Добавить новую сущность.");
+        System.out.println("2. Обновить по id.");
+        System.out.println("3. Удалить по id.");
+        System.out.println("4. Показать список всех сущностей.\n");
     }
 
 
@@ -337,7 +355,7 @@ public class Main {
         String answer = buffer.readLine().toLowerCase();
 
         if (answer.length() > 1) {
-            System.out.println("You wrote large answer, we take only first char...");
+            System.out.println("Вы ввели слишком длинный ответ, мы возьмем первый введенный вами символ...");
         }
 
         return answer.trim().charAt(0);
