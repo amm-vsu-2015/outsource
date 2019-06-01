@@ -1,6 +1,7 @@
 
 /**
 
+  Задача: 7.
 	Класс-родитель: Круг с возможностью подсчета площади и методом кратного увеличения.
   Класс-потомок: Внутренний круг, создающий кольцо и переопределяющий метод площади и увеличения.
 
@@ -40,9 +41,9 @@ public:
   }
 
   string information() {
-    std::ostringstream stream;
-    stream << std::fixed << std::setprecision(2) << radius;
-    std::string radius_str = stream.str();
+    ostringstream stream;
+    stream << fixed << setprecision(2) << radius;
+    string radius_str = stream.str();
 
     return ("Area is " + to_string(area()) + " with radius " + radius_str);
   }
@@ -71,77 +72,55 @@ public:
 
 int main() {
   setlocale(LC_ALL, "Russian");
-  /*
-  double outter_radius = 4, inner_radius = 3, increase = 1.5;
-
-  Circle* circle = new Circle(outter_radius);
-  Ring* ring = new Ring(outter_radius, inner_radius);
-
-  // Circle
-  std::cout << "[ Circle ]";
-  std::cout << '\n' << "information about circle: " << circle->information();
-  circle->increase(increase);
-  std::cout << '\n' << "increase in " << increase << "...";
-  std::cout << '\n' << "information about increased circle: " << circle->information() << '\n';
-
-
-  // Ring
-  std::cout << '\n' << "[ Ring ]";
-  std::cout << '\n' << "information about ring:   " << ring->information();
-  ring->increase(increase);
-  std::cout << '\n' << "increase in " << increase << "...";
-  std::cout << '\n' << "information about increased ring:   " << ring->information() << '\n';
-  */
-
   double outter_radius, inner_radius, radius, increase;
 
   // Circle
-  std::cout << '\n' << "[ Circle ]" << '\n';
-  std::cout << "[!] write radius of circle: ";
-  std::cin >> radius;
+  cout << endl << "[ Конфигурация окружности ]" << endl << endl;
+  cout << "Введите радиус: ";
+  cin >> radius;
 
   Circle* circle = new Circle(radius);
+  cout << "Информация о созданной окружности: " << circle->information() << endl << endl;
 
-  std::cout << '\n' << "information about circle: " << circle->information();
-  std::cout << '\n' << "[!] write multiplier value: ";
-  std::cin >> increase;
+  cout << "Введите значение мультипликатора (во сколько раз увеличить радиус окружности): ";
+  cin >> increase;
 
-  std::cout << '\n' << "increase in " << increase << "...";
   circle->increase(increase);
-
-  std::cout << '\n' << "information about increased circle: " << circle->information() << '\n';
+  cout << "Информация об окружности после увеличения: " << circle->information() << endl;
 
   // Ring
-  std::cout << '\n' << "[ Ring ]" << '\n';
+  cout << endl << "[ Конфигурация кольца ]" << endl;
 
   outter_radius = radius;
 
-  std::cout << "outter radius of Ring equals " << outter_radius << '\n';
-  std::cout << "[!] write inner radius of Ring:  ";
-  std::cin >> inner_radius;
+  cout << "Внешний радиус кольца равен: " << outter_radius << endl;
+  cout << "Введите внутренний радиус кольца:  ";
+  cin >> inner_radius;
 
   outter_radius = abs(outter_radius);
   inner_radius = abs(inner_radius);
 
   if (inner_radius > outter_radius) {
+    cout << endl << "Смена внешнего и внутреннего радиуса..." << endl;
     swap(inner_radius, outter_radius);
   }
 
-  std::cout << "outter Ring radius is " << outter_radius << '\n';
-  std::cout << "inner Ring radius is " << inner_radius << '\n';
+  cout << endl;
+  cout << "Внешний радиус кольца равен: " << outter_radius << endl;
+  cout << "Внутренний радиус кольца равен: " << inner_radius << endl;
 
   Ring* ring = new Ring(outter_radius, inner_radius);
 
-  std::cout << '\n' << "information about Ring: " << ring->information();
-  std::cout << '\n' << "[!] write multiplier value: ";
-  std::cin >> increase;
+  cout << endl;
+  cout << "Информация о созданном кольце: " << ring->information() << endl;
+  cout << "Введите значение мультипликатора (во сколько раз увеличить радиус кольца): ";
+  cin >> increase;
 
-  std::cout << '\n' << "increase in " << increase << "...";
   ring->increase(increase);
 
-  std::cout << '\n' << "information about increased Ring: " << ring->information() << '\n';
+  cout << "Информация о созданном кольце после увеличения: " << ring->information() << endl;
 
   int stop;
-  std::cin >> stop;
+  cin >> stop;
   return 0;
 }

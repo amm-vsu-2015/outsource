@@ -1,16 +1,25 @@
+
+/**
+
+	Задача: 14.
+	Класс-родитель: Книга, включающая параметры имени, года и автора.
+  Класс-потомок: Магазин, определяющий цену книги (умеет уменьшать цену для книг, что более 5 лет)
+
+*/
+
 #include <iostream>
 #include <ctime>
 #include <iomanip>
 #include <sstream>
-// #include <std::string.h>
+#include <string.h>
 // #include <windows>
 
 using namespace std;
 
 class Book {
 protected:
-  std::string name;
-  std::string author;
+  string name;
+  string author;
   int year;
 
 public:
@@ -20,10 +29,10 @@ public:
     year = 0;
   }
 
-  Book(std::string NAME, std::string AUTHOR, int YEAR) {
+  Book(string NAME, string AUTHOR, int YEAR) {
     if (YEAR < 0) {
-      std::cout << "Год не может быть отрицательным!" << std::endl;
-      std::cout << "Во избежание ошибки установлен 2000 год!" << std::endl;
+      cout << "Year can't be negative!" << endl;
+      cout << "Set default year as 2000!" << endl;
       YEAR = 2000;
     }
 
@@ -38,15 +47,15 @@ protected:
   double price;
 
 public:
-  Store(std::string NAME, std::string AUTHOR, int YEAR, double PRICE): Book(NAME, AUTHOR, YEAR) {
+  Store(string NAME, string AUTHOR, int YEAR, double PRICE): Book(NAME, AUTHOR, YEAR) {
     price = PRICE;
   }
 
   string getBook() {
-    std::ostringstream stream;
-    stream << std::fixed << std::setprecision(2) << price;
-    std::string price_str = stream.str();
-    return (name + " from " + author + ", published in " + to_string(year) + " for $" + price_str);
+    ostringstream stream;
+    stream << fixed << setprecision(2) << price;
+    string price_str = stream.str();
+    return (name + " from " + author + ", published in " + to_string(year) + " year, price equals $" + price_str);
   }
 
   int getYear() {
@@ -67,31 +76,35 @@ int main() {
   int books_count = 0;
   int idx_books = 0;
 
-  std::cout << "Сколько книг хотите добавить? ";
-  std::cin >> books_count;
+  cout << "How much books to add? ";
+  cin >> books_count;
 
   Store* books[books_count-1];
 
   while (books_count--) {
-    std::cout << "Введите информацию о новой книге." << endl;
+    cout << "Write information about new book." << endl;
 
     string name, author;
     int year, price;
 
-    std::cout << "Название: ";
-    std::cin >> name;
+    cout << "name: ";
+    cin.get();
+    getline(cin, name);
 
-    std::cout << "Автор: ";
-    std::cin >> author;
+    cout << "author: ";
+    getline(cin, author);
 
-    std::cout << "Год издания: ";
-    std::cin >> year;
+    cout << "published in: ";
+    cin >> year;
 
-    std::cout << "Цена: ";
-    std::cin >> price;
+    cout << "price: ";
+    cin >> price;
 
     books[idx_books++] = new Store(name, author, year, price);
+    cout << endl;
   }
+
+  cout << endl << "List of books: " << endl;
 
   for (int idx_i = 0; idx_i < idx_books; idx_i++) {
     if ((currentYear - books[idx_i]->getYear()) >= 5) {
@@ -101,7 +114,7 @@ int main() {
 
 
   for (int idx_i = 0; idx_i < idx_books; idx_i++) {
-    std::cout << books[idx_i]->getBook() << '\n';
+    cout << idx_i + 1 << ". " <<  books[idx_i]->getBook() << '\n';
   }
 
   return 0;
