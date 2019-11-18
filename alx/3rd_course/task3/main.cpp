@@ -63,7 +63,7 @@ int main() {
 
   double diagE = sqrt(pow(a, 2) + pow(b, 2));
   double diagF = sqrt(pow(c, 2) + pow(d, 2));
-  Triangle* rect = new Rectangle(a, b, c, d, diagE, diagF);
+  Rectangle* rect = new Rectangle(a, b, c, d, diagE, diagF);
 
   std::cout << "triangle:" << '\n';
   std::cout << triangle->information() << '\n';
