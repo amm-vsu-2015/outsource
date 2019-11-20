@@ -1,6 +1,6 @@
 package edu.core.java.print;
 
-public abstract class HumanoidProcess {
+abstract class HumanoidProcess {
 
     private void morning() {
         System.out.println("waking up!");
@@ -8,7 +8,10 @@ public abstract class HumanoidProcess {
 
     private void meet() {
         System.out.println("meet a man!");
+        meetReaction();
     }
+
+    abstract void meetReaction();
 
     abstract void action();
 

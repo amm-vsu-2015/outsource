@@ -1,6 +1,11 @@
 package edu.core.java.print;
 
-public class BadHumanoid extends HumanoidProcess {
+class BadHumanoid extends HumanoidProcess {
+
+    @Override
+    void meetReaction() {
+        System.out.println("say: nice to EAT you! (>*,,*<)");
+    }
 
     @Override
     void action() {
