@@ -7,6 +7,7 @@ import java.util.Stack;
 class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Command undoCommand;
 
     RemoteControl() {
         onCommands = new Command[7];
@@ -16,6 +17,7 @@ class RemoteControl {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
+        undoCommand = noCommand;
     }
 
     void setCommand(int slot, Command onCommand, Command offCommmand) {
@@ -25,10 +27,16 @@ class RemoteControl {
 
     void clickOnButton(int slot) {
         onCommands[slot].execute();
+        undoCommand = onCommands[slot];
     }
 
     void clickOffButton(int slot) {
         offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    void undo() {
+        undoCommand.execute();
     }
 
     public String toString() {

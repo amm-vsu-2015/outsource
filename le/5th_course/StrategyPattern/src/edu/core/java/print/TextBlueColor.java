@@ -4,6 +4,6 @@ public class TextBlueColor implements IColor {
 
     @Override
     public void paint() {
-        System.out.println("print blue color text");
+        System.out.println("Print blue color text");
     }
 }

@@ -39,6 +39,8 @@ class Invoker {
         remote.clickOnButton(3);
         remote.clickOffButton(3);
         remote.clickOffButton(1);
+
+        remote.undo();
     }
 
 }
