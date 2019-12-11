@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d60035f-f1db-4079-afb4-e6bbfc250bb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../alx/5th_course/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/core/java/print/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/core/java/print/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/core/java/print/RemoteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/core/java/print/RemoteControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StrategyPattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StrategyPattern/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StrategyPattern/src/edu/core/java/print/TextBlueColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StrategyPattern/src/edu/core/java/print/TextBlueColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StrategyPattern/src/edu/core/java/print/TextRedColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StrategyPattern/src/edu/core/java/print/TextRedColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TemplatePattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TemplatePattern/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../sa/5th_course/.gitkeep" beforeDir="false" />
-    </list>
+    <list default="true" id="5d60035f-f1db-4079-afb4-e6bbfc250bb6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/core/java/print/RemoteControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#958#959#0" expanded="true" />
@@ -180,12 +169,12 @@
       <option name="presentableId" value="Default" />
       <updated>1574283872135</updated>
       <workItem from="1574283873446" duration="4450000" />
-      <workItem from="1574369909188" duration="594000" />
+      <workItem from="1574369909188" duration="794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5044000" />
+    <option name="totallyTimeSpent" value="5244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="6" />
@@ -198,7 +187,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34056988" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34056988" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,8 +317,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/core/java/print/RemoteControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#958#959#0" expanded="true" />
