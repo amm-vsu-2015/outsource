@@ -40,6 +40,8 @@ class Invoker {
         remote.clickOffButton(3);
         remote.clickOffButton(1);
 
+        System.out.println("\nTry to undo last...\n");
+
         remote.undo();
     }
 

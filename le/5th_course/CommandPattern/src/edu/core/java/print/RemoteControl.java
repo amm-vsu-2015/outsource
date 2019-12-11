@@ -1,9 +1,5 @@
 package edu.core.java.print;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
@@ -43,8 +39,8 @@ class RemoteControl {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("\n------ Remote Control ------\n");
         for (int i = 0; i < onCommands.length; i++) {
-            stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName() +
-                    "   " + offCommands[i].getClass().getName() + "\n");
+            stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName());
+            stringBuffer.append("   " + offCommands[i].getClass().getName() + "\n");
         }
         return stringBuffer.toString();
     }
