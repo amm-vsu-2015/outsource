@@ -1,9 +1,11 @@
 package edu.core.java.print;
 
+import java.util.Stack;
+
 class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
-    private Command undoCommand;
+    private Stack<Command> undoCommand;
 
     RemoteControl() {
         onCommands = new Command[7];
@@ -13,7 +15,7 @@ class RemoteControl {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
-        undoCommand = noCommand;
+        undoCommand = new Stack<>();
     }
 
     void setCommand(int slot, Command onCommand, Command offCommmand) {
@@ -23,16 +25,18 @@ class RemoteControl {
 
     void clickOnButton(int slot) {
         onCommands[slot].execute();
-        undoCommand = onCommands[slot];
+        undoCommand.push(onCommands[slot]);
     }
 
     void clickOffButton(int slot) {
         offCommands[slot].execute();
-        undoCommand = offCommands[slot];
+        undoCommand.push(offCommands[slot]);
     }
 
     void undo() {
-        undoCommand.execute();
+        while (!undoCommand.empty()) {
+            undoCommand.pop().execute();
+        }
     }
 
     public String toString() {
