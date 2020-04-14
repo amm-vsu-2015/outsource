@@ -34,6 +34,16 @@ int** multiplyArrays(int** firstArray, int** secondArray) {
   return newArray;
 }
 
+void deleteArray(int** array) {
+  for (int i = 0; i < 1000; ++i) {
+    delete[] array[i];
+    array[i] = NULL;
+  }
+
+  delete[] array;
+  array = NULL;
+}
+
 int getMaxSumOfLineInArray(int** array) {
   int max = 0;
   #pragma omp parallel for schedule(static)
@@ -53,10 +63,10 @@ int main(int argc, char *argv[]) {
   double min_time = 100;
   double max_value = 0;
 
-  for (int i = 0; i < 1000; i++) {
+  for (int i = 0; i < 100000; i++) {
     start_time = omp_get_wtime();
-    int** firstArray = getArray(1000, 3000);
-    int** secondArray = getArray(500, 15000);
+    int** firstArray = getArray(10, 100);
+    int** secondArray = getArray(500, 1000);
     int** thirdArray = multiplyArrays(firstArray, secondArray);
     int max = getMaxSumOfLineInArray(thirdArray);
     end_time = omp_get_wtime();
@@ -66,6 +76,10 @@ int main(int argc, char *argv[]) {
     if (delta_time < min_time) min_time = delta_time;
 
     if (max > max_value) max_value = max;
+
+    deleteArray(firstArray);
+    deleteArray(secondArray);
+    deleteArray(thirdArray);
   }
 
   printf("answer: %2.15f\n", max_value);
